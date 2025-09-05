@@ -1,0 +1,40 @@
+{
+  "crater": {
+    "demi_human_queen": "亚人女王",
+    "fallingstar_beast": "坠星兽",
+    "fire_prelates": "火焰主教",
+    "magma_wyrm": "熔岩土龙",
+    "red_wolf": "红狼",
+    "valiant_gargoyle": "石像鬼"
+  },
+  "mountaintop": {
+    "albinauric_archers": "白金之子射手",
+    "demi_human_swordsman": "亚人剑士",
+    "flying_dragon": "飞龙",
+    "giant_crows": "巨鸦群",
+    "great_wyrm": "大土龙",
+    "mountaintop_ice_dragon": "雪山冰龙",
+    "snowfield_trolls": "雪原山妖"
+  },
+  "noklateo": {
+    "astel": "艾丝缇",
+    "black_knife_assassin": "黑刀刺客",
+    "dragonkin_soldier": "龙人士兵",
+    "flying_dragon": "飞龙",
+    "headless_troll": "无头山妖",
+    "royal_carian_knight": "卡利亚骑士",
+    "royal_revenant": "王室幽魂"
+  },
+  "rotted_woods": {
+    "ancestor_spirit": "祖灵",
+    "bell_bearing_hunter": "灵珠猎人",
+    "black_blade_kindred": "黑剑眷属",
+    "death_rite_bird": "死亡仪式鸟",
+    "draconic_tree_sentinel": "龙装大树守卫",
+    "erdtree_avatar": "黄金树化身",
+    "magma_wyrm": "熔岩土龙",
+    "royal_carian_knight": "卡利亚骑士",
+    "tree_sentinel": "大树守卫",
+    "ulcerated_tree_spirit": "腐败树灵"
+  }
+}
