@@ -1,0 +1,40 @@
+{
+  "crater": [
+    "demi_human_queen",
+    "fallingstar_beast",
+    "fire_prelates",
+    "magma_wyrm",
+    "red_wolf",
+    "valiant_gargoyle"
+  ],
+  "mountaintop": [
+    "albinauric_archers",
+    "demi_human_swordsman",
+    "flying_dragon",
+    "giant_crows",
+    "great_wyrm",
+    "mountaintop_ice_dragon",
+    "snowfield_trolls"
+  ],
+  "noklateo": [
+    "astel",
+    "black_knife_assassin",
+    "dragonkin_soldier",
+    "flying_dragon",
+    "headless_troll",
+    "royal_carian_knight",
+    "royal_revenant"
+  ],
+  "rotted_woods": [
+    "ancestor_spirit",
+    "bell_bearing_hunter",
+    "black_blade_kindred",
+    "death_rite_bird",
+    "draconic_tree_sentinel",
+    "erdtree_avatar",
+    "magma_wyrm",
+    "royal_carian_knight",
+    "tree_sentinel",
+    "ulcerated_tree_spirit"
+  ]
+}
