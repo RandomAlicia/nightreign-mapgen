@@ -1,0 +1,259 @@
+{
+  "patternId": 56,
+  "Nightlord": "Adel",
+  "Shifting Earth": "Default",
+  "Spawn Point": "Minor Erdtree",
+  "Special Event": "",
+  "pois": [
+    {
+      "x": -90.4,
+      "z": -65.3,
+      "name": "Arena_Boss - Leonine Misbegotten",
+      "dupCount": 2,
+      "names": [
+        "Arena_Boss - Leonine Misbegotten",
+        "Strong_Field_Boss - Bell Bearing Hunter"
+      ]
+    },
+    {
+      "x": 379.0,
+      "z": -364.0,
+      "name": "Camp - Banished Knights"
+    },
+    {
+      "x": -339.0,
+      "z": -235.0,
+      "name": "Camp - Flame Chariots"
+    },
+    {
+      "x": 130.0,
+      "z": 115.0,
+      "name": "Camp - Flame Chariots"
+    },
+    {
+      "x": -157.0,
+      "z": -433.0,
+      "name": "Camp - Royal Army Knights"
+    },
+    {
+      "x": -38.3,
+      "z": -65.3,
+      "name": "Castle - Crucible Knights"
+    },
+    {
+      "x": -432.0,
+      "z": 226.5,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 56.0,
+      "z": 428.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 298.0,
+      "z": 209.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 27.9,
+      "z": -131.7,
+      "name": "Event - Scale-Bearing Merchant"
+    },
+    {
+      "x": -235.4,
+      "z": -202.4,
+      "name": "Evergaol - Beastmen of Farum Azula"
+    },
+    {
+      "x": -28.2,
+      "z": 466.1,
+      "name": "Evergaol - Crucible Knight with Spear"
+    },
+    {
+      "x": -83.6,
+      "z": 181.2,
+      "name": "Evergaol - Crucible Knight with Sword"
+    },
+    {
+      "x": -509.4,
+      "z": 281.0,
+      "name": "Evergaol - Crystalians"
+    },
+    {
+      "x": 185.3,
+      "z": -410.6,
+      "name": "Evergaol - Grave Warden Duelist"
+    },
+    {
+      "x": 201.2,
+      "z": 210.2,
+      "name": "Evergaol - Nox Warriors"
+    },
+    {
+      "x": 445.9,
+      "z": 18.4,
+      "name": "Evergaol - Stoneskin Lords"
+    },
+    {
+      "x": 281.1,
+      "z": -430.4,
+      "name": "Field_Boss - Black Knife Assassin"
+    },
+    {
+      "x": -290.7,
+      "z": -495.4,
+      "name": "Field_Boss - Golden Hippopotamus"
+    },
+    {
+      "x": -103.0,
+      "z": -329.4,
+      "name": "Field_Boss - Grafted Scion"
+    },
+    {
+      "x": -43.1,
+      "z": 216.8,
+      "name": "Field_Boss - Night's Cavalry"
+    },
+    {
+      "x": -314.1,
+      "z": 474.7,
+      "name": "Field_Boss - Red Wolf"
+    },
+    {
+      "x": 78.5,
+      "z": 183.6,
+      "name": "Field_Boss - Royal Revenant"
+    },
+    {
+      "x": -276.0,
+      "z": -78.0,
+      "name": "Fort - Guardian Golem"
+    },
+    {
+      "x": -152.0,
+      "z": 495.0,
+      "name": "Fort - Lordsworn Captain"
+    },
+    {
+      "x": 388.0,
+      "z": -196.0,
+      "name": "Great_Church - Fire Monk"
+    },
+    {
+      "x": -331.0,
+      "z": 84.0,
+      "name": "Great_Church - Oracle Envoys"
+    },
+    {
+      "x": -40.0,
+      "z": -413.0,
+      "name": "Night_Boss - Ancient Dragon (Day 2)"
+    },
+    {
+      "x": 466.0,
+      "z": 402.0,
+      "name": "Night_Boss - Wormface (Day 1)"
+    },
+    {
+      "x": 254.0,
+      "z": 58.0,
+      "name": "Ruins - Erdtree Burial Watchdogs"
+    },
+    {
+      "x": 423.0,
+      "z": 119.0,
+      "name": "Ruins - Erdtree Burial Watchdogs"
+    },
+    {
+      "x": -414.0,
+      "z": 339.0,
+      "name": "Ruins - Perfumer"
+    },
+    {
+      "x": -128.0,
+      "z": 307.0,
+      "name": "Ruins - Perfumer"
+    },
+    {
+      "x": 201.0,
+      "z": 320.0,
+      "name": "Ruins - Perfumer"
+    },
+    {
+      "x": 203.0,
+      "z": -137.0,
+      "name": "Ruins - Perfumer"
+    },
+    {
+      "x": 328.0,
+      "z": 438.0,
+      "name": "Ruins - Perfumer"
+    },
+    {
+      "x": 173.0,
+      "z": -286.0,
+      "name": "Ruins - Wormface"
+    },
+    {
+      "x": -450.0,
+      "z": -84.0,
+      "name": "Small_Camp - Caravans"
+    },
+    {
+      "x": 76.0,
+      "z": -204.0,
+      "name": "Small_Camp - Caravans"
+    },
+    {
+      "x": -71.0,
+      "z": -299.0,
+      "name": "Small_Camp - Guilty Alt"
+    },
+    {
+      "x": -458.0,
+      "z": -322.0,
+      "name": "Small_Camp - Soldiers"
+    },
+    {
+      "x": 470.0,
+      "z": -124.0,
+      "name": "Small_Camp - Wandering Nobles"
+    },
+    {
+      "x": 106.0,
+      "z": -456.0,
+      "name": "Sorcerers_Rise - Fake Building"
+    },
+    {
+      "x": -214.0,
+      "z": 160.0,
+      "name": "Sorcerers_Rise - Withered Trees"
+    },
+    {
+      "x": -289.8,
+      "z": 193.8,
+      "name": "Strong_Field_Boss - Ancestor Spirit"
+    },
+    {
+      "x": 406.2,
+      "z": -10.3,
+      "name": "Strong_Field_Boss - Black Blade Kindred"
+    },
+    {
+      "x": 207.2,
+      "z": 434.8,
+      "name": "Strong_Field_Boss - Erdtree Avatar"
+    },
+    {
+      "x": -252.8,
+      "z": 403.2,
+      "name": "Strong_Field_Boss - Flying Dragon"
+    },
+    {
+      "x": 428.0,
+      "z": 225.0,
+      "name": "Township - Township"
+    }
+  ]
+}

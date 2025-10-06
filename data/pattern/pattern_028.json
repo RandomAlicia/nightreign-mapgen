@@ -1,0 +1,184 @@
+{
+  "patternId": 28,
+  "Nightlord": "Gladius",
+  "Shifting Earth": "Crater",
+  "Spawn Point": "West of Warmaster's Shack",
+  "Special Event": "Day 2 Night Horde",
+  "pois": [
+    {
+      "x": -90.4,
+      "z": -65.3,
+      "name": "Arena_Boss - Black Knife Assassin",
+      "dupCount": 2,
+      "names": [
+        "Arena_Boss - Black Knife Assassin",
+        "Strong_Field_Boss - Death Rite Bird"
+      ]
+    },
+    {
+      "x": 388.0,
+      "z": -196.0,
+      "name": "Camp - Elder Lion"
+    },
+    {
+      "x": -157.0,
+      "z": -433.0,
+      "name": "Camp - Royal Army Knights"
+    },
+    {
+      "x": -38.3,
+      "z": -65.3,
+      "name": "Castle - Crucible Knights"
+    },
+    {
+      "x": 76.0,
+      "z": -204.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 106.0,
+      "z": -456.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 470.0,
+      "z": -124.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 185.3,
+      "z": -410.6,
+      "name": "Evergaol - Banished Knights"
+    },
+    {
+      "x": 445.9,
+      "z": 18.4,
+      "name": "Evergaol - Beastly Brigade"
+    },
+    {
+      "x": -509.4,
+      "z": 281.0,
+      "name": "Evergaol - Crucible Knight with Spear"
+    },
+    {
+      "x": -235.4,
+      "z": -202.4,
+      "name": "Evergaol - Stoneskin Lords"
+    },
+    {
+      "x": 281.1,
+      "z": -430.4,
+      "name": "Field_Boss - Elder Lion"
+    },
+    {
+      "x": -289.8,
+      "z": 193.8,
+      "name": "Field_Boss - Leonine Misbegotten"
+    },
+    {
+      "x": -290.7,
+      "z": -495.4,
+      "name": "Field_Boss - Miranda Blossom"
+    },
+    {
+      "x": -339.0,
+      "z": -235.0,
+      "name": "Fort - Abductor Virgin"
+    },
+    {
+      "x": 173.0,
+      "z": -286.0,
+      "name": "Fort - Lordsworn Captain"
+    },
+    {
+      "x": -276.0,
+      "z": -78.0,
+      "name": "Great_Church - Fire Monk"
+    },
+    {
+      "x": 423.0,
+      "z": 119.0,
+      "name": "Great_Church - Fire Monk"
+    },
+    {
+      "x": -331.0,
+      "z": 84.0,
+      "name": "Great_Church - Mausoleum Knight"
+    },
+    {
+      "x": -203.0,
+      "z": -296.0,
+      "name": "Night_Boss - Bell Bearing Hunter (Day 1)"
+    },
+    {
+      "x": -39.0,
+      "z": 480.7,
+      "name": "Night_Boss - Morgott (Day 2)"
+    },
+    {
+      "x": -414.0,
+      "z": 339.0,
+      "name": "Ruins - Depraved Perfumer"
+    },
+    {
+      "x": 379.0,
+      "z": -364.0,
+      "name": "Ruins - Depraved Perfumer"
+    },
+    {
+      "x": 203.0,
+      "z": -137.0,
+      "name": "Ruins - Erdtree Burial Watchdogs"
+    },
+    {
+      "x": 328.0,
+      "z": 438.0,
+      "name": "Ruins - Erdtree Burial Watchdogs"
+    },
+    {
+      "x": 428.0,
+      "z": 225.0,
+      "name": "Small_Camp - Caravans"
+    },
+    {
+      "x": -432.0,
+      "z": 226.5,
+      "name": "Small_Camp - Caravans and Nobles"
+    },
+    {
+      "x": -458.0,
+      "z": -322.0,
+      "name": "Small_Camp - Dogs"
+    },
+    {
+      "x": 298.0,
+      "z": 209.0,
+      "name": "Small_Camp - Dogs and Soldiers"
+    },
+    {
+      "x": -450.0,
+      "z": -84.0,
+      "name": "Sorcerers_Rise - Withered Trees"
+    },
+    {
+      "x": -314.1,
+      "z": 474.7,
+      "name": "Strong_Field_Boss - Erdtree Avatar"
+    },
+    {
+      "x": -103.0,
+      "z": -329.4,
+      "name": "Strong_Field_Boss - Tree Sentinel"
+    },
+    {
+      "x": 406.2,
+      "z": -10.3,
+      "name": "Strong_Field_Boss - Ulcerated Tree Spirit"
+    },
+    {
+      "x": -71.0,
+      "z": -299.0,
+      "name": "Township - Township"
+    }
+  ]
+}

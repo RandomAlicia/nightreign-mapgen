@@ -1,0 +1,189 @@
+{
+  "patternId": 260,
+  "Nightlord": "Caligo",
+  "Shifting Earth": "Mountaintop",
+  "Spawn Point": "Minor Erdtree",
+  "Special Event": "Day 2 Maris Bubbles",
+  "pois": [
+    {
+      "x": -90.4,
+      "z": -65.3,
+      "name": "Arena_Boss - Red Wolf",
+      "dupCount": 2,
+      "names": [
+        "Arena_Boss - Red Wolf",
+        "Strong_Field_Boss - Bell Bearing Hunter"
+      ]
+    },
+    {
+      "x": 379.0,
+      "z": -364.0,
+      "name": "Camp - Flame Chariots"
+    },
+    {
+      "x": 203.0,
+      "z": -137.0,
+      "name": "Camp - Royal Army Knights"
+    },
+    {
+      "x": 254.0,
+      "z": 58.0,
+      "name": "Camp - Royal Army Knights"
+    },
+    {
+      "x": -38.3,
+      "z": -65.3,
+      "name": "Castle - Crucible Knights"
+    },
+    {
+      "x": -450.0,
+      "z": -84.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 76.0,
+      "z": -204.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 106.0,
+      "z": -456.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 185.3,
+      "z": -410.6,
+      "name": "Evergaol - Godskin Apostle"
+    },
+    {
+      "x": -235.4,
+      "z": -202.4,
+      "name": "Evergaol - Nox Warriors"
+    },
+    {
+      "x": 201.2,
+      "z": 210.2,
+      "name": "Evergaol - Omen"
+    },
+    {
+      "x": 445.9,
+      "z": 18.4,
+      "name": "Evergaol - Stoneskin Lords"
+    },
+    {
+      "x": -290.7,
+      "z": -495.4,
+      "name": "Field_Boss - Demi-Human Queen"
+    },
+    {
+      "x": 78.5,
+      "z": 183.6,
+      "name": "Field_Boss - Grafted Scion"
+    },
+    {
+      "x": 281.1,
+      "z": -430.4,
+      "name": "Field_Boss - Miranda Blossom"
+    },
+    {
+      "x": 201.0,
+      "z": 320.0,
+      "name": "Fort - Abductor Virgin"
+    },
+    {
+      "x": 423.0,
+      "z": 119.0,
+      "name": "Fort - Abductor Virgin"
+    },
+    {
+      "x": 388.0,
+      "z": -196.0,
+      "name": "Fort - Crystalians"
+    },
+    {
+      "x": -339.0,
+      "z": -235.0,
+      "name": "Great_Church - Fire Monk"
+    },
+    {
+      "x": -157.0,
+      "z": -433.0,
+      "name": "Great_Church - Oracle Envoys"
+    },
+    {
+      "x": 130.0,
+      "z": 115.0,
+      "name": "Great_Church - Oracle Envoys"
+    },
+    {
+      "x": -154.5,
+      "z": 163.8,
+      "name": "Night_Boss - Godskin Duo (Day 2)"
+    },
+    {
+      "x": 296.0,
+      "z": -288.0,
+      "name": "Night_Boss - Ulcerated Tree Spirit (Day 1)"
+    },
+    {
+      "x": -276.0,
+      "z": -78.0,
+      "name": "Ruins - Albinaurics"
+    },
+    {
+      "x": 328.0,
+      "z": 438.0,
+      "name": "Ruins - Albinaurics"
+    },
+    {
+      "x": 173.0,
+      "z": -286.0,
+      "name": "Ruins - Beastmen of Farum Azula"
+    },
+    {
+      "x": 470.0,
+      "z": -124.0,
+      "name": "Small_Camp - Demi-Humans"
+    },
+    {
+      "x": -458.0,
+      "z": -322.0,
+      "name": "Small_Camp - Dogs"
+    },
+    {
+      "x": 56.0,
+      "z": 428.0,
+      "name": "Small_Camp - Dogs"
+    },
+    {
+      "x": -71.0,
+      "z": -299.0,
+      "name": "Small_Camp - Soldiers"
+    },
+    {
+      "x": 428.0,
+      "z": 225.0,
+      "name": "Small_Camp - Soldiers"
+    },
+    {
+      "x": 298.0,
+      "z": 209.0,
+      "name": "Sorcerers_Rise - Fog Door"
+    },
+    {
+      "x": 406.2,
+      "z": -10.3,
+      "name": "Strong_Field_Boss - Ancestor Spirit"
+    },
+    {
+      "x": -103.0,
+      "z": -329.4,
+      "name": "Strong_Field_Boss - Black Blade Kindred"
+    },
+    {
+      "x": 207.2,
+      "z": 434.8,
+      "name": "Strong_Field_Boss - Erdtree Avatar"
+    }
+  ]
+}

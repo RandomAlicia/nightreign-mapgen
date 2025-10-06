@@ -1,0 +1,184 @@
+{
+  "patternId": 188,
+  "Nightlord": "Libra",
+  "Shifting Earth": "Crater",
+  "Spawn Point": "East of Cavalry Bridge",
+  "Special Event": "Difficult Sorcerer's Rise",
+  "pois": [
+    {
+      "x": -90.4,
+      "z": -65.3,
+      "name": "Arena_Boss - Grafted Scion",
+      "dupCount": 2,
+      "names": [
+        "Arena_Boss - Grafted Scion",
+        "Strong_Field_Boss - Royal Carian Knight"
+      ]
+    },
+    {
+      "x": -276.0,
+      "z": -78.0,
+      "name": "Camp - Flame Chariots"
+    },
+    {
+      "x": 203.0,
+      "z": -137.0,
+      "name": "Camp - Redmane Knights"
+    },
+    {
+      "x": -38.3,
+      "z": -65.3,
+      "name": "Castle - Banished Knights"
+    },
+    {
+      "x": -450.0,
+      "z": -84.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 106.0,
+      "z": -456.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 470.0,
+      "z": -124.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 445.9,
+      "z": 18.4,
+      "name": "Evergaol - Beastly Brigade"
+    },
+    {
+      "x": 185.3,
+      "z": -410.6,
+      "name": "Evergaol - Bloodhound Knight"
+    },
+    {
+      "x": -235.4,
+      "z": -202.4,
+      "name": "Evergaol - Crucible Knight with Spear"
+    },
+    {
+      "x": -509.4,
+      "z": 281.0,
+      "name": "Evergaol - Nox Warriors"
+    },
+    {
+      "x": -289.8,
+      "z": 193.8,
+      "name": "Field_Boss - Black Knife Assassin"
+    },
+    {
+      "x": -103.0,
+      "z": -329.4,
+      "name": "Field_Boss - Elder Lion"
+    },
+    {
+      "x": 406.2,
+      "z": -10.3,
+      "name": "Field_Boss - Golden Hippopotamus"
+    },
+    {
+      "x": -339.0,
+      "z": -235.0,
+      "name": "Fort - Abductor Virgin"
+    },
+    {
+      "x": 328.0,
+      "z": 438.0,
+      "name": "Fort - Crystalians"
+    },
+    {
+      "x": 379.0,
+      "z": -364.0,
+      "name": "Fort - Crystalians"
+    },
+    {
+      "x": -331.0,
+      "z": 84.0,
+      "name": "Great_Church - Mausoleum Knight"
+    },
+    {
+      "x": 423.0,
+      "z": 119.0,
+      "name": "Great_Church - Mausoleum Knight"
+    },
+    {
+      "x": 173.0,
+      "z": -286.0,
+      "name": "Great_Church - Oracle Envoys"
+    },
+    {
+      "x": -39.0,
+      "z": 480.7,
+      "name": "Night_Boss - Death Rite Bird (Day 2)"
+    },
+    {
+      "x": 336.0,
+      "z": -46.0,
+      "name": "Night_Boss - Tibia Mariner (Day 1)"
+    },
+    {
+      "x": -157.0,
+      "z": -433.0,
+      "name": "Ruins - Depraved Perfumer"
+    },
+    {
+      "x": 388.0,
+      "z": -196.0,
+      "name": "Ruins - Depraved Perfumer"
+    },
+    {
+      "x": -414.0,
+      "z": 339.0,
+      "name": "Ruins - Erdtree Burial Watchdogs"
+    },
+    {
+      "x": 298.0,
+      "z": 209.0,
+      "name": "Small_Camp - Dogs and Soldiers"
+    },
+    {
+      "x": -432.0,
+      "z": 226.5,
+      "name": "Small_Camp - Guilty Alt"
+    },
+    {
+      "x": 76.0,
+      "z": -204.0,
+      "name": "Small_Camp - Rats and Demi-Humans"
+    },
+    {
+      "x": 428.0,
+      "z": 225.0,
+      "name": "Sorcerers_Rise - Above Door, Teleporting Trees, Missing Statue"
+    },
+    {
+      "x": -458.0,
+      "z": -322.0,
+      "name": "Sorcerers_Rise - Missing Statue"
+    },
+    {
+      "x": -314.1,
+      "z": 474.7,
+      "name": "Strong_Field_Boss - Ancestor Spirit"
+    },
+    {
+      "x": -290.7,
+      "z": -495.4,
+      "name": "Strong_Field_Boss - Flying Dragon"
+    },
+    {
+      "x": 281.1,
+      "z": -430.4,
+      "name": "Strong_Field_Boss - Magma Wyrm"
+    },
+    {
+      "x": -71.0,
+      "z": -299.0,
+      "name": "Township - Township"
+    }
+  ]
+}

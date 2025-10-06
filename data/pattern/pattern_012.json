@@ -1,0 +1,254 @@
+{
+  "patternId": 12,
+  "Nightlord": "Gladius",
+  "Shifting Earth": "Default",
+  "Spawn Point": "Stormhill South of Gate",
+  "Special Event": "",
+  "pois": [
+    {
+      "x": -90.4,
+      "z": -65.3,
+      "name": "Arena_Boss - Black Knife Assassin",
+      "dupCount": 2,
+      "names": [
+        "Arena_Boss - Black Knife Assassin",
+        "Strong_Field_Boss - Death Rite Bird"
+      ]
+    },
+    {
+      "x": 203.0,
+      "z": -137.0,
+      "name": "Camp - Banished Knights"
+    },
+    {
+      "x": 379.0,
+      "z": -364.0,
+      "name": "Camp - Redmane Knights"
+    },
+    {
+      "x": -331.0,
+      "z": 84.0,
+      "name": "Camp - Royal Army Knights"
+    },
+    {
+      "x": 254.0,
+      "z": 58.0,
+      "name": "Camp - Royal Army Knights"
+    },
+    {
+      "x": -38.3,
+      "z": -65.3,
+      "name": "Castle - Trolls"
+    },
+    {
+      "x": -458.0,
+      "z": -322.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": -214.0,
+      "z": 160.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 428.0,
+      "z": 225.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 185.3,
+      "z": -410.6,
+      "name": "Evergaol - Beastly Brigade"
+    },
+    {
+      "x": -83.6,
+      "z": 181.2,
+      "name": "Evergaol - Bloodhound Knight"
+    },
+    {
+      "x": -235.4,
+      "z": -202.4,
+      "name": "Evergaol - Crucible Knight with Sword"
+    },
+    {
+      "x": -28.2,
+      "z": 466.1,
+      "name": "Evergaol - Crystalians"
+    },
+    {
+      "x": -509.4,
+      "z": 281.0,
+      "name": "Evergaol - Godskin Noble"
+    },
+    {
+      "x": 445.9,
+      "z": 18.4,
+      "name": "Evergaol - Omen"
+    },
+    {
+      "x": 201.2,
+      "z": 210.2,
+      "name": "Evergaol - Stoneskin Lords"
+    },
+    {
+      "x": 207.2,
+      "z": 434.8,
+      "name": "Field_Boss - Ancient Hero of Zamor"
+    },
+    {
+      "x": -290.7,
+      "z": -495.4,
+      "name": "Field_Boss - Golden Hippopotamus"
+    },
+    {
+      "x": 281.1,
+      "z": -430.4,
+      "name": "Field_Boss - Grafted Scion"
+    },
+    {
+      "x": 406.2,
+      "z": -10.3,
+      "name": "Field_Boss - Leonine Misbegotten"
+    },
+    {
+      "x": -252.8,
+      "z": 403.2,
+      "name": "Field_Boss - Red Wolf"
+    },
+    {
+      "x": -289.8,
+      "z": 193.8,
+      "name": "Field_Boss - Royal Revenant"
+    },
+    {
+      "x": -339.0,
+      "z": -235.0,
+      "name": "Fort - Abductor Virgin"
+    },
+    {
+      "x": -157.0,
+      "z": -433.0,
+      "name": "Fort - Crystalians"
+    },
+    {
+      "x": 130.0,
+      "z": 115.0,
+      "name": "Fort - Crystalians"
+    },
+    {
+      "x": 423.0,
+      "z": 119.0,
+      "name": "Fort - Crystalians"
+    },
+    {
+      "x": -276.0,
+      "z": -78.0,
+      "name": "Great_Church - Mausoleum Knight"
+    },
+    {
+      "x": -414.0,
+      "z": 339.0,
+      "name": "Great_Church - Oracle Envoys"
+    },
+    {
+      "x": -203.0,
+      "z": -296.0,
+      "name": "Night_Boss - Demi-Human Queen and Swordmaster (Day 1)"
+    },
+    {
+      "x": 336.0,
+      "z": -46.0,
+      "name": "Night_Boss - Tree Sentinel and Royal Cavalrymen (Day 2)"
+    },
+    {
+      "x": 173.0,
+      "z": -286.0,
+      "name": "Ruins - Ancient Heroes of Zamor"
+    },
+    {
+      "x": 201.0,
+      "z": 320.0,
+      "name": "Ruins - Ancient Heroes of Zamor"
+    },
+    {
+      "x": 388.0,
+      "z": -196.0,
+      "name": "Ruins - Ancient Heroes of Zamor"
+    },
+    {
+      "x": -152.0,
+      "z": 495.0,
+      "name": "Ruins - Battlemages"
+    },
+    {
+      "x": -128.0,
+      "z": 307.0,
+      "name": "Ruins - Battlemages"
+    },
+    {
+      "x": 328.0,
+      "z": 438.0,
+      "name": "Ruins - Perfumer"
+    },
+    {
+      "x": -71.0,
+      "z": -299.0,
+      "name": "Small_Camp - Caravans"
+    },
+    {
+      "x": 298.0,
+      "z": 209.0,
+      "name": "Small_Camp - Caravans"
+    },
+    {
+      "x": -432.0,
+      "z": 226.5,
+      "name": "Small_Camp - Dogs and Soldiers"
+    },
+    {
+      "x": 470.0,
+      "z": -124.0,
+      "name": "Small_Camp - Guilty Alt"
+    },
+    {
+      "x": -450.0,
+      "z": -84.0,
+      "name": "Small_Camp - Wandering Nobles"
+    },
+    {
+      "x": 106.0,
+      "z": -456.0,
+      "name": "Sorcerers_Rise - Missing Statue"
+    },
+    {
+      "x": 76.0,
+      "z": -204.0,
+      "name": "Sorcerers_Rise - Windy Trees"
+    },
+    {
+      "x": 56.0,
+      "z": 428.0,
+      "name": "Sorcerers_Rise - Withered Trees"
+    },
+    {
+      "x": -103.0,
+      "z": -329.4,
+      "name": "Strong_Field_Boss - Ancestor Spirit"
+    },
+    {
+      "x": 78.5,
+      "z": 183.6,
+      "name": "Strong_Field_Boss - Black Blade Kindred"
+    },
+    {
+      "x": -43.1,
+      "z": 216.8,
+      "name": "Strong_Field_Boss - Flying Dragon"
+    },
+    {
+      "x": -314.1,
+      "z": 474.7,
+      "name": "Strong_Field_Boss - Magma Wyrm"
+    }
+  ]
+}

@@ -1,0 +1,1324 @@
+{
+  "entries": [
+    {
+      "cid": "00000",
+      "id": "arena_boss_ancient_hero_of_zamor",
+      "i18nKey": "poi.arena_boss_ancient_hero_of_zamor",
+      "category": "Arena_Boss",
+      "name": "Arena_Boss - Ancient Hero of Zamor",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "00100",
+      "id": "arena_boss_bell_bearing_hunter",
+      "i18nKey": "poi.arena_boss_bell_bearing_hunter",
+      "category": "Arena_Boss",
+      "name": "Arena_Boss - Bell Bearing Hunter",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "00200",
+      "id": "arena_boss_black_knife_assassin",
+      "i18nKey": "poi.arena_boss_black_knife_assassin",
+      "category": "Arena_Boss",
+      "name": "Arena_Boss - Black Knife Assassin",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "00300",
+      "id": "arena_boss_grafted_scion",
+      "i18nKey": "poi.arena_boss_grafted_scion",
+      "category": "Arena_Boss",
+      "name": "Arena_Boss - Grafted Scion",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "00400",
+      "id": "arena_boss_leonine_misbegotten",
+      "i18nKey": "poi.arena_boss_leonine_misbegotten",
+      "category": "Arena_Boss",
+      "name": "Arena_Boss - Leonine Misbegotten",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "00500",
+      "id": "arena_boss_red_wolf",
+      "i18nKey": "poi.arena_boss_red_wolf",
+      "category": "Arena_Boss",
+      "name": "Arena_Boss - Red Wolf",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "00600",
+      "id": "arena_boss_royal_revenant",
+      "i18nKey": "poi.arena_boss_royal_revenant",
+      "category": "Arena_Boss",
+      "name": "Arena_Boss - Royal Revenant",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "00700",
+      "id": "camp_banished_knights",
+      "i18nKey": "poi.camp_banished_knights",
+      "category": "Camp",
+      "name": "Camp - Banished Knights",
+      "icon": "assets/icon/landmark/camp_blank.png"
+    },
+    {
+      "cid": "00800",
+      "id": "camp_elder_lion",
+      "i18nKey": "poi.camp_elder_lion",
+      "category": "Camp",
+      "name": "Camp - Elder Lion",
+      "icon": "assets/icon/landmark/camp_blank.png"
+    },
+    {
+      "cid": "00900",
+      "id": "camp_flame_chariots",
+      "i18nKey": "poi.camp_flame_chariots",
+      "category": "Camp",
+      "name": "Camp - Flame Chariots",
+      "icon": "assets/icon/landmark/camp_fire.png"
+    },
+    {
+      "cid": "01000",
+      "id": "camp_frenzied_flame_troll",
+      "i18nKey": "poi.camp_frenzied_flame_troll",
+      "category": "Camp",
+      "name": "Camp - Frenzied Flame Troll",
+      "icon": "assets/icon/landmark/camp_madness.png"
+    },
+    {
+      "cid": "01100",
+      "id": "camp_leonine_misbegotten",
+      "i18nKey": "poi.camp_leonine_misbegotten",
+      "category": "Camp",
+      "name": "Camp - Leonine Misbegotten",
+      "icon": "assets/icon/landmark/camp_blank.png"
+    },
+    {
+      "cid": "01200",
+      "id": "camp_redmane_knights",
+      "i18nKey": "poi.camp_redmane_knights",
+      "category": "Camp",
+      "name": "Camp - Redmane Knights",
+      "icon": "assets/icon/landmark/camp_fire.png"
+    },
+    {
+      "cid": "01300",
+      "id": "camp_royal_army_knights",
+      "i18nKey": "poi.camp_royal_army_knights",
+      "category": "Camp",
+      "name": "Camp - Royal Army Knights",
+      "icon": "assets/icon/landmark/camp_lightning.png"
+    },
+    {
+      "cid": "01400",
+      "id": "castle_banished_knights",
+      "i18nKey": "poi.castle_banished_knights",
+      "category": "Castle",
+      "name": "Castle - Banished Knights",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "01500",
+      "id": "castle_crucible_knights",
+      "i18nKey": "poi.castle_crucible_knights",
+      "category": "Castle",
+      "name": "Castle - Crucible Knights",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "01600",
+      "id": "castle_trolls",
+      "i18nKey": "poi.castle_trolls",
+      "category": "Castle",
+      "name": "Castle - Trolls",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "01700",
+      "id": "church_normal",
+      "i18nKey": "poi.church_normal",
+      "category": "Church",
+      "name": "Church - Normal",
+      "icon": "assets/icon/landmark/church.png"
+    },
+    {
+      "cid": "01800",
+      "id": "church_rats",
+      "i18nKey": "poi.church_rats",
+      "category": "Church",
+      "name": "Church - Rats",
+      "icon": "assets/icon/landmark/church.png"
+    },
+    {
+      "cid": "01900",
+      "id": "church_rats_alt",
+      "i18nKey": "poi.church_rats_alt",
+      "category": "Church",
+      "name": "Church - Rats Alt",
+      "icon": "assets/icon/landmark/church.png"
+    },
+    {
+      "cid": "02000",
+      "id": "church_rotted",
+      "i18nKey": "poi.church_rotted",
+      "category": "Church",
+      "name": "Church - Rotted",
+      "icon": "assets/icon/landmark/church.png"
+    },
+    {
+      "cid": "02100",
+      "id": "event_gnoster",
+      "i18nKey": "poi.event_gnoster",
+      "category": "Event",
+      "name": "Event - Gnoster",
+      "icon": ""
+    },
+    {
+      "cid": "02200",
+      "id": "event_libra",
+      "i18nKey": "poi.event_libra",
+      "category": "Event",
+      "name": "Event - Libra",
+      "icon": ""
+    },
+    {
+      "cid": "02300",
+      "id": "event_maris",
+      "i18nKey": "poi.event_maris",
+      "category": "Event",
+      "name": "Event - Maris",
+      "icon": ""
+    },
+    {
+      "cid": "02400",
+      "id": "event_morgott",
+      "i18nKey": "poi.event_morgott",
+      "category": "Event",
+      "name": "Event - Morgott",
+      "icon": ""
+    },
+    {
+      "cid": "02500",
+      "id": "event_scale_bearing_merchant",
+      "i18nKey": "poi.event_scale_bearing_merchant",
+      "category": "Event",
+      "name": "Event - Scale-Bearing Merchant",
+      "icon": "assets/icon/landmark/merchant_glow.png"
+    },
+    {
+      "cid": "02600",
+      "id": "evergaol_ancient_dragon",
+      "i18nKey": "poi.evergaol_ancient_dragon",
+      "category": "Evergaol",
+      "name": "Evergaol - Ancient Dragon",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "02700",
+      "id": "evergaol_banished_knights",
+      "i18nKey": "poi.evergaol_banished_knights",
+      "category": "Evergaol",
+      "name": "Evergaol - Banished Knights",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "02800",
+      "id": "evergaol_beastly_brigade",
+      "i18nKey": "poi.evergaol_beastly_brigade",
+      "category": "Evergaol",
+      "name": "Evergaol - Beastly Brigade",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "02900",
+      "id": "evergaol_beastmen_of_farum_azula",
+      "i18nKey": "poi.evergaol_beastmen_of_farum_azula",
+      "category": "Evergaol",
+      "name": "Evergaol - Beastmen of Farum Azula",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03000",
+      "id": "evergaol_bloodhound_knight",
+      "i18nKey": "poi.evergaol_bloodhound_knight",
+      "category": "Evergaol",
+      "name": "Evergaol - Bloodhound Knight",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03100",
+      "id": "evergaol_crucible_knight_with_spear",
+      "i18nKey": "poi.evergaol_crucible_knight_with_spear",
+      "category": "Evergaol",
+      "name": "Evergaol - Crucible Knight with Spear",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03200",
+      "id": "evergaol_crucible_knight_with_sword",
+      "i18nKey": "poi.evergaol_crucible_knight_with_sword",
+      "category": "Evergaol",
+      "name": "Evergaol - Crucible Knight with Sword",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03300",
+      "id": "evergaol_crystalians",
+      "i18nKey": "poi.evergaol_crystalians",
+      "category": "Evergaol",
+      "name": "Evergaol - Crystalians",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03400",
+      "id": "evergaol_death_rite_bird",
+      "i18nKey": "poi.evergaol_death_rite_bird",
+      "category": "Evergaol",
+      "name": "Evergaol - Death Rite Bird",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03500",
+      "id": "evergaol_dragonkin_soldier",
+      "i18nKey": "poi.evergaol_dragonkin_soldier",
+      "category": "Evergaol",
+      "name": "Evergaol - Dragonkin Soldier",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03600",
+      "id": "evergaol_godskin_apostle",
+      "i18nKey": "poi.evergaol_godskin_apostle",
+      "category": "Evergaol",
+      "name": "Evergaol - Godskin Apostle",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03700",
+      "id": "evergaol_godskin_duo",
+      "i18nKey": "poi.evergaol_godskin_duo",
+      "category": "Evergaol",
+      "name": "Evergaol - Godskin Duo",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03800",
+      "id": "evergaol_godskin_noble",
+      "i18nKey": "poi.evergaol_godskin_noble",
+      "category": "Evergaol",
+      "name": "Evergaol - Godskin Noble",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "03900",
+      "id": "evergaol_grave_warden_duelist",
+      "i18nKey": "poi.evergaol_grave_warden_duelist",
+      "category": "Evergaol",
+      "name": "Evergaol - Grave Warden Duelist",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "04000",
+      "id": "evergaol_nox_warriors",
+      "i18nKey": "poi.evergaol_nox_warriors",
+      "category": "Evergaol",
+      "name": "Evergaol - Nox Warriors",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "04100",
+      "id": "evergaol_omen",
+      "i18nKey": "poi.evergaol_omen",
+      "category": "Evergaol",
+      "name": "Evergaol - Omen",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "04200",
+      "id": "evergaol_stoneskin_lords",
+      "i18nKey": "poi.evergaol_stoneskin_lords",
+      "category": "Evergaol",
+      "name": "Evergaol - Stoneskin Lords",
+      "icon": "assets/icon/landmark/evergaol.png"
+    },
+    {
+      "cid": "04300",
+      "id": "field_boss_ancient_hero_of_zamor",
+      "i18nKey": "poi.field_boss_ancient_hero_of_zamor",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Ancient Hero of Zamor",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "04400",
+      "id": "field_boss_black_knife_assassin",
+      "i18nKey": "poi.field_boss_black_knife_assassin",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Black Knife Assassin",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "04500",
+      "id": "field_boss_demi_human_queen",
+      "i18nKey": "poi.field_boss_demi_human_queen",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Demi-Human Queen",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "04600",
+      "id": "field_boss_elder_lion",
+      "i18nKey": "poi.field_boss_elder_lion",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Elder Lion",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "04700",
+      "id": "field_boss_golden_hippopotamus",
+      "i18nKey": "poi.field_boss_golden_hippopotamus",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Golden Hippopotamus",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "04800",
+      "id": "field_boss_grafted_scion",
+      "i18nKey": "poi.field_boss_grafted_scion",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Grafted Scion",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "04900",
+      "id": "field_boss_leonine_misbegotten",
+      "i18nKey": "poi.field_boss_leonine_misbegotten",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Leonine Misbegotten",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "05000",
+      "id": "field_boss_miranda_blossom",
+      "i18nKey": "poi.field_boss_miranda_blossom",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Miranda Blossom",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "05100",
+      "id": "field_boss_night_s_cavalry",
+      "i18nKey": "poi.field_boss_night_s_cavalry",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Night's Cavalry",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "05200",
+      "id": "field_boss_red_wolf",
+      "i18nKey": "poi.field_boss_red_wolf",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Red Wolf",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "05300",
+      "id": "field_boss_royal_revenant",
+      "i18nKey": "poi.field_boss_royal_revenant",
+      "category": "Field_Boss",
+      "name": "Field_Boss - Royal Revenant",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "05400",
+      "id": "fort_abductor_virgin",
+      "i18nKey": "poi.fort_abductor_virgin",
+      "category": "Fort",
+      "name": "Fort - Abductor Virgin",
+      "icon": "assets/icon/landmark/fort_blank.png"
+    },
+    {
+      "cid": "05500",
+      "id": "fort_crystalians",
+      "i18nKey": "poi.fort_crystalians",
+      "category": "Fort",
+      "name": "Fort - Crystalians",
+      "icon": "assets/icon/landmark/fort_magic.png"
+    },
+    {
+      "cid": "05600",
+      "id": "fort_guardian_golem",
+      "i18nKey": "poi.fort_guardian_golem",
+      "category": "Fort",
+      "name": "Fort - Guardian Golem",
+      "icon": "assets/icon/landmark/fort_blank.png"
+    },
+    {
+      "cid": "05700",
+      "id": "fort_lordsworn_captain",
+      "i18nKey": "poi.fort_lordsworn_captain",
+      "category": "Fort",
+      "name": "Fort - Lordsworn Captain",
+      "icon": "assets/icon/landmark/fort_blank.png"
+    },
+    {
+      "cid": "05800",
+      "id": "great_church_fire_monk",
+      "i18nKey": "poi.great_church_fire_monk",
+      "category": "Great_Church",
+      "name": "Great_Church - Fire Monk",
+      "icon": "assets/icon/landmark/cathedral_fire.png"
+    },
+    {
+      "cid": "05900",
+      "id": "great_church_guardian_golem",
+      "i18nKey": "poi.great_church_guardian_golem",
+      "category": "Great_Church",
+      "name": "Great_Church - Guardian Golem",
+      "icon": "assets/icon/landmark/cathedral_blank.png"
+    },
+    {
+      "cid": "06000",
+      "id": "great_church_mausoleum_knight",
+      "i18nKey": "poi.great_church_mausoleum_knight",
+      "category": "Great_Church",
+      "name": "Great_Church - Mausoleum Knight",
+      "icon": "assets/icon/landmark/cathedral_blank.png"
+    },
+    {
+      "cid": "06100",
+      "id": "great_church_oracle_envoys",
+      "i18nKey": "poi.great_church_oracle_envoys",
+      "category": "Great_Church",
+      "name": "Great_Church - Oracle Envoys",
+      "icon": "assets/icon/landmark/cathedral_holy.png"
+    },
+    {
+      "cid": "06200",
+      "id": "map_event_artist_s_shack",
+      "i18nKey": "poi.map_event_artist_s_shack",
+      "category": "Map_Event",
+      "name": "Map_Event - Artist's Shack",
+      "icon": ""
+    },
+    {
+      "cid": "06300",
+      "id": "map_event_gatefront",
+      "i18nKey": "poi.map_event_gatefront",
+      "category": "Map_Event",
+      "name": "Map_Event - Gatefront",
+      "icon": ""
+    },
+    {
+      "cid": "06400",
+      "id": "map_event_minor_erdtree",
+      "i18nKey": "poi.map_event_minor_erdtree",
+      "category": "Map_Event",
+      "name": "Map_Event - Minor Erdtree",
+      "icon": ""
+    },
+    {
+      "cid": "06500",
+      "id": "map_event_northeast_mistwood",
+      "i18nKey": "poi.map_event_northeast_mistwood",
+      "category": "Map_Event",
+      "name": "Map_Event - Northeast Mistwood",
+      "icon": ""
+    },
+    {
+      "cid": "06600",
+      "id": "map_event_northeast_stormhill",
+      "i18nKey": "poi.map_event_northeast_stormhill",
+      "category": "Map_Event",
+      "name": "Map_Event - Northeast Stormhill",
+      "icon": ""
+    },
+    {
+      "cid": "06700",
+      "id": "map_event_northwest_mistwood",
+      "i18nKey": "poi.map_event_northwest_mistwood",
+      "category": "Map_Event",
+      "name": "Map_Event - Northwest Mistwood",
+      "icon": ""
+    },
+    {
+      "cid": "06800",
+      "id": "map_event_northwest_stormhill",
+      "i18nKey": "poi.map_event_northwest_stormhill",
+      "category": "Map_Event",
+      "name": "Map_Event - Northwest Stormhill",
+      "icon": ""
+    },
+    {
+      "cid": "06900",
+      "id": "map_event_south_lake",
+      "i18nKey": "poi.map_event_south_lake",
+      "category": "Map_Event",
+      "name": "Map_Event - South Lake",
+      "icon": ""
+    },
+    {
+      "cid": "07000",
+      "id": "map_event_south_mistwood",
+      "i18nKey": "poi.map_event_south_mistwood",
+      "category": "Map_Event",
+      "name": "Map_Event - South Mistwood",
+      "icon": ""
+    },
+    {
+      "cid": "07100",
+      "id": "map_event_summonwater",
+      "i18nKey": "poi.map_event_summonwater",
+      "category": "Map_Event",
+      "name": "Map_Event - Summonwater",
+      "icon": ""
+    },
+    {
+      "cid": "07200",
+      "id": "map_event_summonwater_approach",
+      "i18nKey": "poi.map_event_summonwater_approach",
+      "category": "Map_Event",
+      "name": "Map_Event - Summonwater Approach",
+      "icon": ""
+    },
+    {
+      "cid": "07300",
+      "id": "map_event_west_mistwood",
+      "i18nKey": "poi.map_event_west_mistwood",
+      "category": "Map_Event",
+      "name": "Map_Event - West Mistwood",
+      "icon": ""
+    },
+    {
+      "cid": "07400",
+      "id": "night_boss_ancient_dragon",
+      "i18nKey": "poi.night_boss_ancient_dragon",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Ancient Dragon (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "07500",
+      "id": "night_boss_battlefield_commander",
+      "i18nKey": "poi.night_boss_battlefield_commander",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Battlefield Commander (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "07600",
+      "id": "night_boss_bell_bearing_hunter",
+      "i18nKey": "poi.night_boss_bell_bearing_hunter",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Bell Bearing Hunter (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "07700",
+      "id": "night_boss_bell_bearing_hunter_only",
+      "i18nKey": "poi.night_boss_bell_bearing_hunter_only",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Bell Bearing Hunter Only (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "07800",
+      "id": "night_boss_centipede_demon",
+      "i18nKey": "poi.night_boss_centipede_demon",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Centipede Demon (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "07900",
+      "id": "night_boss_crucible_knight_and_golden_hippopotamus",
+      "i18nKey": "poi.night_boss_crucible_knight_and_golden_hippopotamus",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Crucible Knight and Golden Hippopotamus (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08000",
+      "id": "night_boss_crucible_knight_and_golden_hippopotamus_only",
+      "i18nKey": "poi.night_boss_crucible_knight_and_golden_hippopotamus_only",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Crucible Knight and Golden Hippopotamus Only (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08100",
+      "id": "night_boss_dancer_of_the_boreal_valley",
+      "i18nKey": "poi.night_boss_dancer_of_the_boreal_valley",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Dancer of the Boreal Valley (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08200",
+      "id": "night_boss_dancer_of_the_boreal_valley_only",
+      "i18nKey": "poi.night_boss_dancer_of_the_boreal_valley_only",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Dancer of the Boreal Valley Only (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08300",
+      "id": "night_boss_death_rite_bird",
+      "i18nKey": "poi.night_boss_death_rite_bird",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Death Rite Bird (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08400",
+      "id": "night_boss_death_rite_bird_only",
+      "i18nKey": "poi.night_boss_death_rite_bird_only",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Death Rite Bird Only (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08500",
+      "id": "night_boss_demi_human_queen_and_swordmaster",
+      "i18nKey": "poi.night_boss_demi_human_queen_and_swordmaster",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Demi-Human Queen and Swordmaster (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08600",
+      "id": "night_boss_draconic_tree_sentinel_and_royal_cavalrymen",
+      "i18nKey": "poi.night_boss_draconic_tree_sentinel_and_royal_cavalrymen",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Draconic Tree Sentinel and Royal Cavalrymen (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08700",
+      "id": "night_boss_dragonkin_soldier",
+      "i18nKey": "poi.night_boss_dragonkin_soldier",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Dragonkin Soldier (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08800",
+      "id": "night_boss_dragonkin_soldier_only",
+      "i18nKey": "poi.night_boss_dragonkin_soldier_only",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Dragonkin Soldier Only (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "08900",
+      "id": "night_boss_fallingstar_beast",
+      "i18nKey": "poi.night_boss_fallingstar_beast",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Fallingstar Beast (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09000",
+      "id": "night_boss_gaping_dragon",
+      "i18nKey": "poi.night_boss_gaping_dragon",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Gaping Dragon (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09100",
+      "id": "night_boss_godskin_duo",
+      "i18nKey": "poi.night_boss_godskin_duo",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Godskin Duo (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09200",
+      "id": "night_boss_grafted_monarch",
+      "i18nKey": "poi.night_boss_grafted_monarch",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Grafted Monarch (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09300",
+      "id": "night_boss_great_wyrm",
+      "i18nKey": "poi.night_boss_great_wyrm",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Great Wyrm (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09400",
+      "id": "night_boss_morgott",
+      "i18nKey": "poi.night_boss_morgott",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Morgott (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09500",
+      "id": "night_boss_morgott_only",
+      "i18nKey": "poi.night_boss_morgott_only",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Morgott Only (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09600",
+      "id": "night_boss_nameless_king",
+      "i18nKey": "poi.night_boss_nameless_king",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Nameless King (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09700",
+      "id": "night_boss_night_s_cavalry_duo",
+      "i18nKey": "poi.night_boss_night_s_cavalry_duo",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Night's Cavalry Duo (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09800",
+      "id": "night_boss_outland_commander",
+      "i18nKey": "poi.night_boss_outland_commander",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Outland Commander (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "09900",
+      "id": "night_boss_royal_revenant",
+      "i18nKey": "poi.night_boss_royal_revenant",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Royal Revenant (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10000",
+      "id": "night_boss_smelter_demon",
+      "i18nKey": "poi.night_boss_smelter_demon",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Smelter Demon (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10100",
+      "id": "night_boss_smelter_demon_only",
+      "i18nKey": "poi.night_boss_smelter_demon_only",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Smelter Demon Only (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10200",
+      "id": "night_boss_the_duke_s_dear_freja",
+      "i18nKey": "poi.night_boss_the_duke_s_dear_freja",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - The Duke's Dear Freja (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10300",
+      "id": "night_boss_tibia_mariner",
+      "i18nKey": "poi.night_boss_tibia_mariner",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Tibia Mariner (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10400",
+      "id": "night_boss_tree_sentinel_and_royal_cavalrymen",
+      "i18nKey": "poi.night_boss_tree_sentinel_and_royal_cavalrymen",
+      "category": "Night_Boss_Day_2",
+      "name": "Night_Boss - Tree Sentinel and Royal Cavalrymen (Day 2)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10500",
+      "id": "night_boss_ulcerated_tree_spirit",
+      "i18nKey": "poi.night_boss_ulcerated_tree_spirit",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Ulcerated Tree Spirit (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10600",
+      "id": "night_boss_valiant_gargoyle",
+      "i18nKey": "poi.night_boss_valiant_gargoyle",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Valiant Gargoyle (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10700",
+      "id": "night_boss_valiant_gargoyle_only",
+      "i18nKey": "poi.night_boss_valiant_gargoyle_only",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Valiant Gargoyle Only (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10800",
+      "id": "night_boss_wormface",
+      "i18nKey": "poi.night_boss_wormface",
+      "category": "Night_Boss_Day_1",
+      "name": "Night_Boss - Wormface (Day 1)",
+      "icon": "assets/icon/landmark/night_circle.png"
+    },
+    {
+      "cid": "10900",
+      "id": "ruins_albinauric_archers",
+      "i18nKey": "poi.ruins_albinauric_archers",
+      "category": "Ruins",
+      "name": "Ruins - Albinauric Archers",
+      "icon": "assets/icon/landmark/ruin_frost.png"
+    },
+    {
+      "cid": "11000",
+      "id": "ruins_albinaurics",
+      "i18nKey": "poi.ruins_albinaurics",
+      "category": "Ruins",
+      "name": "Ruins - Albinaurics",
+      "icon": "assets/icon/landmark/ruin_holy.png"
+    },
+    {
+      "cid": "11100",
+      "id": "ruins_ancient_heroes_of_zamor",
+      "i18nKey": "poi.ruins_ancient_heroes_of_zamor",
+      "category": "Ruins",
+      "name": "Ruins - Ancient Heroes of Zamor",
+      "icon": "assets/icon/landmark/ruin_frost.png"
+    },
+    {
+      "cid": "11200",
+      "id": "ruins_battlemages",
+      "i18nKey": "poi.ruins_battlemages",
+      "category": "Ruins",
+      "name": "Ruins - Battlemages",
+      "icon": "assets/icon/landmark/ruin_magic.png"
+    },
+    {
+      "cid": "11300",
+      "id": "ruins_beastmen_of_farum_azula",
+      "i18nKey": "poi.ruins_beastmen_of_farum_azula",
+      "category": "Ruins",
+      "name": "Ruins - Beastmen of Farum Azula",
+      "icon": "assets/icon/landmark/ruin_lightning.png"
+    },
+    {
+      "cid": "11400",
+      "id": "ruins_depraved_perfumer",
+      "i18nKey": "poi.ruins_depraved_perfumer",
+      "category": "Ruins",
+      "name": "Ruins - Depraved Perfumer",
+      "icon": "assets/icon/landmark/ruin_poison.png"
+    },
+    {
+      "cid": "11500",
+      "id": "ruins_erdtree_burial_watchdogs",
+      "i18nKey": "poi.ruins_erdtree_burial_watchdogs",
+      "category": "Ruins",
+      "name": "Ruins - Erdtree Burial Watchdogs",
+      "icon": "assets/icon/landmark/ruin_blank.png"
+    },
+    {
+      "cid": "11600",
+      "id": "ruins_perfumer",
+      "i18nKey": "poi.ruins_perfumer",
+      "category": "Ruins",
+      "name": "Ruins - Perfumer",
+      "icon": "assets/icon/landmark/ruin_poison.png"
+    },
+    {
+      "cid": "11700",
+      "id": "ruins_runebear",
+      "i18nKey": "poi.ruins_runebear",
+      "category": "Ruins",
+      "name": "Ruins - Runebear",
+      "icon": "assets/icon/landmark/ruin_sleep.png"
+    },
+    {
+      "cid": "11800",
+      "id": "ruins_sanguine_noble",
+      "i18nKey": "poi.ruins_sanguine_noble",
+      "category": "Ruins",
+      "name": "Ruins - Sanguine Noble",
+      "icon": "assets/icon/landmark/ruin_bleed.png"
+    },
+    {
+      "cid": "11900",
+      "id": "ruins_wormface",
+      "i18nKey": "poi.ruins_wormface",
+      "category": "Ruins",
+      "name": "Ruins - Wormface",
+      "icon": "assets/icon/landmark/ruin_death.png"
+    },
+    {
+      "cid": "12000",
+      "id": "small_camp_caravans",
+      "i18nKey": "poi.small_camp_caravans",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Caravans",
+      "icon": "assets/icon/landmark/caravans.png"
+    },
+    {
+      "cid": "12100",
+      "id": "small_camp_caravans_and_nobles",
+      "i18nKey": "poi.small_camp_caravans_and_nobles",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Caravans and Nobles",
+      "icon": "assets/icon/landmark/caravans.png"
+    },
+    {
+      "cid": "12200",
+      "id": "small_camp_demi_humans",
+      "i18nKey": "poi.small_camp_demi_humans",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Demi-Humans",
+      "icon": ""
+    },
+    {
+      "cid": "12300",
+      "id": "small_camp_dogs",
+      "i18nKey": "poi.small_camp_dogs",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Dogs",
+      "icon": ""
+    },
+    {
+      "cid": "12400",
+      "id": "small_camp_dogs_and_soldiers",
+      "i18nKey": "poi.small_camp_dogs_and_soldiers",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Dogs and Soldiers",
+      "icon": ""
+    },
+    {
+      "cid": "12500",
+      "id": "small_camp_foot_soldiers",
+      "i18nKey": "poi.small_camp_foot_soldiers",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Foot Soldiers",
+      "icon": ""
+    },
+    {
+      "cid": "12600",
+      "id": "small_camp_guilty_alt",
+      "i18nKey": "poi.small_camp_guilty_alt",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Guilty Alt",
+      "icon": ""
+    },
+    {
+      "cid": "12700",
+      "id": "small_camp_misbegotten",
+      "i18nKey": "poi.small_camp_misbegotten",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Misbegotten",
+      "icon": ""
+    },
+    {
+      "cid": "12800",
+      "id": "small_camp_nobles_and_soldiers",
+      "i18nKey": "poi.small_camp_nobles_and_soldiers",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Nobles and Soldiers",
+      "icon": ""
+    },
+    {
+      "cid": "12900",
+      "id": "small_camp_putrid_ancestral_followers",
+      "i18nKey": "poi.small_camp_putrid_ancestral_followers",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Putrid Ancestral Followers",
+      "icon": ""
+    },
+    {
+      "cid": "13000",
+      "id": "small_camp_putrid_ancestral_followers_alt",
+      "i18nKey": "poi.small_camp_putrid_ancestral_followers_alt",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Putrid Ancestral Followers Alt",
+      "icon": ""
+    },
+    {
+      "cid": "13100",
+      "id": "small_camp_rats_and_demi_humans",
+      "i18nKey": "poi.small_camp_rats_and_demi_humans",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Rats and Demi-Humans",
+      "icon": ""
+    },
+    {
+      "cid": "13200",
+      "id": "small_camp_shack",
+      "i18nKey": "poi.small_camp_shack",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Shack",
+      "icon": ""
+    },
+    {
+      "cid": "13300",
+      "id": "small_camp_soldiers",
+      "i18nKey": "poi.small_camp_soldiers",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Soldiers",
+      "icon": ""
+    },
+    {
+      "cid": "13400",
+      "id": "small_camp_wandering_nobles",
+      "i18nKey": "poi.small_camp_wandering_nobles",
+      "category": "Small_Camp",
+      "name": "Small_Camp - Wandering Nobles",
+      "icon": ""
+    },
+    {
+      "cid": "13500",
+      "id": "sorcerers_rise_above_door",
+      "i18nKey": "poi.sorcerers_rise_above_door",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Above Door",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "13600",
+      "id": "sorcerers_rise_above_door_teleporting_trees_missing_statue",
+      "i18nKey": "poi.sorcerers_rise_above_door_teleporting_trees_missing_statue",
+      "category": "Difficult_Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Above Door, Teleporting Trees, Missing Statue",
+      "icon": "assets/icon/landmark/ancient_rise.png"
+    },
+    {
+      "cid": "13700",
+      "id": "sorcerers_rise_fake_building",
+      "i18nKey": "poi.sorcerers_rise_fake_building",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Fake Building",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "13800",
+      "id": "sorcerers_rise_fake_building_pool_reflection_second_floor",
+      "i18nKey": "poi.sorcerers_rise_fake_building_pool_reflection_second_floor",
+      "category": "Difficult_Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Fake Building, Pool Reflection, Second Floor",
+      "icon": "assets/icon/landmark/ancient_rise.png"
+    },
+    {
+      "cid": "13900",
+      "id": "sorcerers_rise_fake_building_right_of_door_unlit_candle",
+      "i18nKey": "poi.sorcerers_rise_fake_building_right_of_door_unlit_candle",
+      "category": "Difficult_Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Fake Building, Right of Door, Unlit Candle",
+      "icon": "assets/icon/landmark/ancient_rise.png"
+    },
+    {
+      "cid": "14000",
+      "id": "sorcerers_rise_fleeing_stump",
+      "i18nKey": "poi.sorcerers_rise_fleeing_stump",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Fleeing Stump",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "14100",
+      "id": "sorcerers_rise_fog_door",
+      "i18nKey": "poi.sorcerers_rise_fog_door",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Fog Door",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "14200",
+      "id": "sorcerers_rise_imp_statue",
+      "i18nKey": "poi.sorcerers_rise_imp_statue",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Imp Statue",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "14300",
+      "id": "sorcerers_rise_imp_statue_teleporting_trees_fleeing_stump",
+      "i18nKey": "poi.sorcerers_rise_imp_statue_teleporting_trees_fleeing_stump",
+      "category": "Difficult_Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Imp Statue, Teleporting Trees, Fleeing Stump",
+      "icon": "assets/icon/landmark/ancient_rise.png"
+    },
+    {
+      "cid": "14400",
+      "id": "sorcerers_rise_imp_statue_windy_trees_second_floor",
+      "i18nKey": "poi.sorcerers_rise_imp_statue_windy_trees_second_floor",
+      "category": "Difficult_Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Imp Statue, Windy Trees, Second Floor",
+      "icon": "assets/icon/landmark/ancient_rise.png"
+    },
+    {
+      "cid": "14500",
+      "id": "sorcerers_rise_missing_statue",
+      "i18nKey": "poi.sorcerers_rise_missing_statue",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Missing Statue",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "14600",
+      "id": "sorcerers_rise_pool_reflection",
+      "i18nKey": "poi.sorcerers_rise_pool_reflection",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Pool Reflection",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "14700",
+      "id": "sorcerers_rise_rear_withered_trees_right_of_door_missing_statue",
+      "i18nKey": "poi.sorcerers_rise_rear_withered_trees_right_of_door_missing_statue",
+      "category": "Difficult_Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Rear Withered Trees, Right of Door, Missing Statue",
+      "icon": "assets/icon/landmark/ancient_rise.png"
+    },
+    {
+      "cid": "14800",
+      "id": "sorcerers_rise_unlit_candle",
+      "i18nKey": "poi.sorcerers_rise_unlit_candle",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Unlit Candle",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "14900",
+      "id": "sorcerers_rise_windy_trees",
+      "i18nKey": "poi.sorcerers_rise_windy_trees",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Windy Trees",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "15000",
+      "id": "sorcerers_rise_withered_trees",
+      "i18nKey": "poi.sorcerers_rise_withered_trees",
+      "category": "Sorcerers_Rise",
+      "name": "Sorcerers_Rise - Withered Trees",
+      "icon": "assets/icon/landmark/rise.png"
+    },
+    {
+      "cid": "15100",
+      "id": "strong_field_boss_ancestor_spirit",
+      "i18nKey": "poi.strong_field_boss_ancestor_spirit",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Ancestor Spirit",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "15200",
+      "id": "strong_field_boss_bell_bearing_hunter",
+      "i18nKey": "poi.strong_field_boss_bell_bearing_hunter",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Bell Bearing Hunter",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "15300",
+      "id": "strong_field_boss_black_blade_kindred",
+      "i18nKey": "poi.strong_field_boss_black_blade_kindred",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Black Blade Kindred",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "15400",
+      "id": "strong_field_boss_death_rite_bird",
+      "i18nKey": "poi.strong_field_boss_death_rite_bird",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Death Rite Bird",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "15500",
+      "id": "strong_field_boss_draconic_tree_sentinel",
+      "i18nKey": "poi.strong_field_boss_draconic_tree_sentinel",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Draconic Tree Sentinel",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "15600",
+      "id": "strong_field_boss_erdtree_avatar",
+      "i18nKey": "poi.strong_field_boss_erdtree_avatar",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Erdtree Avatar",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "15700",
+      "id": "strong_field_boss_flying_dragon",
+      "i18nKey": "poi.strong_field_boss_flying_dragon",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Flying Dragon",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "15800",
+      "id": "strong_field_boss_magma_wyrm",
+      "i18nKey": "poi.strong_field_boss_magma_wyrm",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Magma Wyrm",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "15900",
+      "id": "strong_field_boss_royal_carian_knight",
+      "i18nKey": "poi.strong_field_boss_royal_carian_knight",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Royal Carian Knight",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "16000",
+      "id": "strong_field_boss_tree_sentinel",
+      "i18nKey": "poi.strong_field_boss_tree_sentinel",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Tree Sentinel",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "16100",
+      "id": "strong_field_boss_ulcerated_tree_spirit",
+      "i18nKey": "poi.strong_field_boss_ulcerated_tree_spirit",
+      "category": "Strong_Field_Boss",
+      "name": "Strong_Field_Boss - Ulcerated Tree Spirit",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "16200",
+      "id": "township_township",
+      "i18nKey": "poi.township_township",
+      "category": "Township",
+      "name": "Township - Township",
+      "icon": "assets/icon/landmark/village_glow.png"
+    },
+    {
+      "cid": "16300",
+      "id": "event_meteor_strike",
+      "i18nKey": "poi.event_meteor_strike",
+      "category": "Event",
+      "name": "Event - Meteor Strike",
+      "icon": "assets/icon/landmark/event.png"
+    },
+    {
+      "cid": "16400",
+      "id": "event_walking_mausoleum",
+      "i18nKey": "poi.event_walking_mausoleum",
+      "category": "Event",
+      "name": "Event - Walking Mausoleum",
+      "icon": "assets/icon/landmark/event.png"
+    }
+  ]
+}

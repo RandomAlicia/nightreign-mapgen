@@ -1,0 +1,254 @@
+{
+  "patternId": 90,
+  "Nightlord": "Gnoster",
+  "Shifting Earth": "Default",
+  "Spawn Point": "Stormhill South of Gate",
+  "Special Event": "Difficult Sorcerer's Rise",
+  "pois": [
+    {
+      "x": -90.4,
+      "z": -65.3,
+      "name": "Arena_Boss - Leonine Misbegotten",
+      "dupCount": 2,
+      "names": [
+        "Arena_Boss - Leonine Misbegotten",
+        "Strong_Field_Boss - Draconic Tree Sentinel"
+      ]
+    },
+    {
+      "x": 201.0,
+      "z": 320.0,
+      "name": "Camp - Flame Chariots"
+    },
+    {
+      "x": -339.0,
+      "z": -235.0,
+      "name": "Camp - Leonine Misbegotten"
+    },
+    {
+      "x": 130.0,
+      "z": 115.0,
+      "name": "Camp - Leonine Misbegotten"
+    },
+    {
+      "x": 423.0,
+      "z": 119.0,
+      "name": "Camp - Leonine Misbegotten"
+    },
+    {
+      "x": 173.0,
+      "z": -286.0,
+      "name": "Camp - Redmane Knights"
+    },
+    {
+      "x": 203.0,
+      "z": -137.0,
+      "name": "Camp - Redmane Knights"
+    },
+    {
+      "x": -38.3,
+      "z": -65.3,
+      "name": "Castle - Banished Knights"
+    },
+    {
+      "x": -71.0,
+      "z": -299.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 56.0,
+      "z": 428.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": 428.0,
+      "z": 225.0,
+      "name": "Church - Normal"
+    },
+    {
+      "x": -28.2,
+      "z": 466.1,
+      "name": "Evergaol - Bloodhound Knight"
+    },
+    {
+      "x": 201.2,
+      "z": 210.2,
+      "name": "Evergaol - Crucible Knight with Spear"
+    },
+    {
+      "x": 185.3,
+      "z": -410.6,
+      "name": "Evergaol - Crucible Knight with Sword"
+    },
+    {
+      "x": -235.4,
+      "z": -202.4,
+      "name": "Evergaol - Grave Warden Duelist"
+    },
+    {
+      "x": -83.6,
+      "z": 181.2,
+      "name": "Evergaol - Nox Warriors"
+    },
+    {
+      "x": -509.4,
+      "z": 281.0,
+      "name": "Evergaol - Omen"
+    },
+    {
+      "x": 445.9,
+      "z": 18.4,
+      "name": "Evergaol - Stoneskin Lords"
+    },
+    {
+      "x": -290.7,
+      "z": -495.4,
+      "name": "Field_Boss - Ancient Hero of Zamor"
+    },
+    {
+      "x": 406.2,
+      "z": -10.3,
+      "name": "Field_Boss - Black Knife Assassin"
+    },
+    {
+      "x": -103.0,
+      "z": -329.4,
+      "name": "Field_Boss - Demi-Human Queen"
+    },
+    {
+      "x": 78.5,
+      "z": 183.6,
+      "name": "Field_Boss - Elder Lion"
+    },
+    {
+      "x": -43.1,
+      "z": 216.8,
+      "name": "Field_Boss - Golden Hippopotamus"
+    },
+    {
+      "x": -314.1,
+      "z": 474.7,
+      "name": "Field_Boss - Grafted Scion"
+    },
+    {
+      "x": -414.0,
+      "z": 339.0,
+      "name": "Fort - Abductor Virgin"
+    },
+    {
+      "x": -276.0,
+      "z": -78.0,
+      "name": "Fort - Lordsworn Captain"
+    },
+    {
+      "x": -152.0,
+      "z": 495.0,
+      "name": "Fort - Lordsworn Captain"
+    },
+    {
+      "x": -157.0,
+      "z": -433.0,
+      "name": "Great_Church - Mausoleum Knight"
+    },
+    {
+      "x": 379.0,
+      "z": -364.0,
+      "name": "Great_Church - Mausoleum Knight"
+    },
+    {
+      "x": 254.0,
+      "z": 58.0,
+      "name": "Great_Church - Oracle Envoys"
+    },
+    {
+      "x": -203.0,
+      "z": -296.0,
+      "name": "Night_Boss - Centipede Demon (Day 1)"
+    },
+    {
+      "x": 336.0,
+      "z": -46.0,
+      "name": "Night_Boss - Dragonkin Soldier (Day 2)"
+    },
+    {
+      "x": -128.0,
+      "z": 307.0,
+      "name": "Ruins - Battlemages"
+    },
+    {
+      "x": -331.0,
+      "z": 84.0,
+      "name": "Ruins - Erdtree Burial Watchdogs"
+    },
+    {
+      "x": 388.0,
+      "z": -196.0,
+      "name": "Ruins - Erdtree Burial Watchdogs"
+    },
+    {
+      "x": 328.0,
+      "z": 438.0,
+      "name": "Ruins - Perfumer"
+    },
+    {
+      "x": 76.0,
+      "z": -204.0,
+      "name": "Small_Camp - Caravans"
+    },
+    {
+      "x": -458.0,
+      "z": -322.0,
+      "name": "Small_Camp - Misbegotten"
+    },
+    {
+      "x": -450.0,
+      "z": -84.0,
+      "name": "Small_Camp - Nobles and Soldiers"
+    },
+    {
+      "x": -214.0,
+      "z": 160.0,
+      "name": "Small_Camp - Soldiers"
+    },
+    {
+      "x": 470.0,
+      "z": -124.0,
+      "name": "Small_Camp - Soldiers"
+    },
+    {
+      "x": 298.0,
+      "z": 209.0,
+      "name": "Sorcerers_Rise - Fog Door"
+    },
+    {
+      "x": 106.0,
+      "z": -456.0,
+      "name": "Sorcerers_Rise - Rear Withered Trees, Right of Door, Missing Statue"
+    },
+    {
+      "x": -432.0,
+      "z": 226.5,
+      "name": "Sorcerers_Rise - Withered Trees"
+    },
+    {
+      "x": 207.2,
+      "z": 434.8,
+      "name": "Strong_Field_Boss - Black Blade Kindred"
+    },
+    {
+      "x": 281.1,
+      "z": -430.4,
+      "name": "Strong_Field_Boss - Death Rite Bird"
+    },
+    {
+      "x": -289.8,
+      "z": 193.8,
+      "name": "Strong_Field_Boss - Erdtree Avatar"
+    },
+    {
+      "x": -252.8,
+      "z": 403.2,
+      "name": "Strong_Field_Boss - Magma Wyrm"
+    }
+  ]
+}
