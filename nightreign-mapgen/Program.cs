@@ -250,6 +250,50 @@ catch (Exception e)
 }
 
 
+// 12d) Labels - Field Boss (Field_Boss / Strong_Field_Boss / Arena_Boss / Castle)
+try
+{
+    // Reuse name-keyed index (indexObj) so the resolver matches by 'name'
+    NightReign.MapGen.Rendering.LabelerFieldBoss.Label(
+        background,
+        patternDoc.pois,
+        p => (p.name, p.x, p.z),
+        indexObj,
+        Path.Combine(cwd, "appsettings.json"),
+        cwd,
+        WorldToPxPy1536,
+        "poiStandard"
+    );
+}
+catch (Exception e)
+{
+    Console.WriteLine($"[FieldBoss Labels] skipped: {e.Message}");
+
+
+}
+
+                // 12e) Labels - Night Boss
+                try
+                {
+                    NightReign.MapGen.Rendering.LabelerNightBoss.Label(
+                        background,
+                        patternDoc.pois,
+                        p => (p.name, p.x, p.z),
+                        indexObj,
+                        System.IO.Path.Combine(cwd, "appsettings.json"),
+                        cwd,
+                        WorldToPxPy1536,
+                        "poiNightBoss"
+                    );
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[NightBoss Labels] skipped: {ex.Message}");
+                }
+
+
+
+
                 }
                 catch (Exception e)
                 {

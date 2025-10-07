@@ -1,0 +1,82 @@
+[
+  {
+    "id": "shifting_earth_flying_dragon",
+    "px": 995,
+    "py": 326,
+    "name": "Shifting_Earth - Flying Dragon",
+    "x": 227.0,
+    "z": 442.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_flying_dragon"
+  },
+  {
+    "id": "shifting_earth_fire_prelates",
+    "px": 783,
+    "py": 381,
+    "name": "Shifting_Earth - Fire Prelates",
+    "x": 15.0,
+    "z": 387.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_fire_prelates"
+  },
+  {
+    "id": "shifting_earth_demi_human_queen",
+    "px": 631,
+    "py": 397,
+    "name": "Shifting_Earth - Demi-Human Queen",
+    "x": -137.0,
+    "z": 371.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_demi_human_queen"
+  },
+  {
+    "id": "shifting_earth_red_wolf",
+    "px": 552,
+    "py": 460,
+    "name": "Shifting_Earth - Red Wolf",
+    "x": -216.0,
+    "z": 308.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_red_wolf"
+  },
+  {
+    "id": "shifting_earth_demi_human_queen",
+    "px": 933,
+    "py": 480,
+    "name": "Shifting_Earth - Demi-Human Queen",
+    "x": 165.0,
+    "z": 288.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_demi_human_queen"
+  },
+  {
+    "id": "shifting_earth_magma_wyrm",
+    "px": 883,
+    "py": 642,
+    "name": "Shifting_Earth - Magma Wyrm",
+    "x": 115.0,
+    "z": 126.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_magma_wyrm"
+  },
+  {
+    "id": "shifting_earth_fallingstar_beast",
+    "px": 786,
+    "py": 660,
+    "name": "Shifting_Earth - Fallingstar Beast",
+    "x": 18.0,
+    "z": 108.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_fallingstar_beast"
+  },
+  {
+    "id": "shifting_earth_valiant_gargoyle",
+    "px": 611,
+    "py": 664,
+    "name": "Shifting_Earth - Valiant Gargoyle",
+    "x": -157.0,
+    "z": 104.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_valiant_gargoyle"
+  }
+]

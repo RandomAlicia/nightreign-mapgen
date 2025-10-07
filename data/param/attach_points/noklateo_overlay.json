@@ -1,0 +1,92 @@
+[
+  {
+    "id": "shifting_earth_royal_carian_knight",
+    "px": 521,
+    "py": 808,
+    "name": "Shifting_Earth - Royal Carian Knight",
+    "x": -247.0,
+    "z": -40.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_royal_carian_knight"
+  },
+  {
+    "id": "shifting_earth_golden_hippopotamus",
+    "px": 755,
+    "py": 855,
+    "name": "Shifting_Earth - Golden Hippopotamus",
+    "x": -13.0,
+    "z": -87.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_golden_hippopotamus"
+  },
+  {
+    "id": "shifting_earth_black_knife_assassin",
+    "px": 319,
+    "py": 1019,
+    "name": "Shifting_Earth - Black Knife Assassin",
+    "x": -449.0,
+    "z": -251.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_black_knife_assassin"
+  },
+  {
+    "id": "shifting_earth_royal_revenant",
+    "px": 368,
+    "py": 1065,
+    "name": "Shifting_Earth - Royal Revenant",
+    "x": -400.0,
+    "z": -297.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_royal_revenant"
+  },
+  {
+    "id": "shifting_earth_dragonkin_soldier",
+    "px": 464,
+    "py": 1067,
+    "name": "Shifting_Earth - Dragonkin Soldier",
+    "x": -304.0,
+    "z": -299.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_dragonkin_soldier"
+  },
+  {
+    "id": "shifting_earth_flying_dragon_elite",
+    "px": 752,
+    "py": 1170,
+    "name": "Shifting_Earth - Flying Dragon (Elite)",
+    "x": -16.0,
+    "z": -402.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_flying_dragon_elite"
+  },
+  {
+    "id": "shifting_earth_astel",
+    "px": 315,
+    "py": 1215,
+    "name": "Shifting_Earth - Astel",
+    "x": -453.0,
+    "z": -447.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_astel"
+  },
+  {
+    "id": "shifting_earth_headless_troll",
+    "px": 487,
+    "py": 1154,
+    "name": "Shifting_Earth - Headless Troll",
+    "x": -281.0,
+    "z": -386.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_headless_troll"
+  },
+  {
+    "id": "shifting_earth_black_knife_assassin",
+    "px": 487,
+    "py": 1198,
+    "name": "Shifting_Earth - Black Knife Assassin",
+    "x": -281.0,
+    "z": -430.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_black_knife_assassin"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "shifting_earth_giant_crows",
+    "px": 518,
+    "py": 294,
+    "name": "Shifting_Earth - Giant Crows",
+    "x": -250.0,
+    "z": 474.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_giant_crows"
+  },
+  {
+    "id": "shifting_earth_demi_human_swordmaster",
+    "px": 687,
+    "py": 296,
+    "name": "Shifting_Earth - Demi-Human Swordmaster",
+    "x": -81.0,
+    "z": 472.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_demi_human_swordmaster"
+  },
+  {
+    "id": "shifting_earth_mountaintop_ice_dragon",
+    "px": 604,
+    "py": 300,
+    "name": "Shifting_Earth - Mountaintop Ice Dragon",
+    "x": -164.0,
+    "z": 468.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_mountaintop_ice_dragon"
+  },
+  {
+    "id": "shifting_earth_demi_human_swordmaster",
+    "px": 378,
+    "py": 319,
+    "name": "Shifting_Earth - Demi-Human Swordmaster",
+    "x": -390.0,
+    "z": 449.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_demi_human_swordmaster"
+  },
+  {
+    "id": "shifting_earth_mountaintop_ice_dragon",
+    "px": 296,
+    "py": 380,
+    "name": "Shifting_Earth - Mountaintop Ice Dragon",
+    "x": -472.0,
+    "z": 388.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_mountaintop_ice_dragon"
+  },
+  {
+    "id": "shifting_earth_mountaintop_ice_dragon",
+    "px": 558,
+    "py": 431,
+    "name": "Shifting_Earth - Mountaintop Ice Dragon",
+    "x": -210.0,
+    "z": 337.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_mountaintop_ice_dragon"
+  },
+  {
+    "id": "shifting_earth_snowfield_trolls",
+    "px": 645,
+    "py": 512,
+    "name": "Shifting_Earth - Snowfield Trolls",
+    "x": -123.0,
+    "z": 256.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_snowfield_trolls"
+  },
+  {
+    "id": "shifting_earth_flying_dragon",
+    "px": 473,
+    "py": 540,
+    "name": "Shifting_Earth - Flying Dragon",
+    "x": -295.0,
+    "z": 228.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_flying_dragon"
+  },
+  {
+    "id": "shifting_earth_mountaintop_ice_dragon",
+    "px": 361,
+    "py": 542,
+    "name": "Shifting_Earth - Mountaintop Ice Dragon",
+    "x": -407.0,
+    "z": 226.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_mountaintop_ice_dragon"
+  },
+  {
+    "id": "shifting_earth_albinauric_archers",
+    "px": 329,
+    "py": 693,
+    "name": "Shifting_Earth - Albinauric Archers",
+    "x": -439.0,
+    "z": 75.0,
+    "category": "Shifting_Earth",
+    "i18nKey": "poi.shifting_earth_albinauric_archers"
+  }
+]

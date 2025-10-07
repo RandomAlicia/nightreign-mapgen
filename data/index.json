@@ -1319,6 +1319,166 @@
       "category": "Event",
       "name": "Event - Walking Mausoleum",
       "icon": "assets/icon/landmark/event.png"
+    },
+    {
+      "cid": "16500",
+      "id": "shifting_earth_albinauric_archers",
+      "i18nKey": "poi.shifting_earth_albinauric_archers",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Albinauric Archers",
+      "icon": "assets/icon/landmark/ruin_frost.png"
+    },
+    {
+      "cid": "16600",
+      "id": "shifting_earth_astel",
+      "i18nKey": "poi.shifting_earth_astel",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Astel",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "16700",
+      "id": "shifting_earth_black_knife_assassin",
+      "i18nKey": "poi.shifting_earth_black_knife_assassin",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Black Knife Assassin",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "16800",
+      "id": "shifting_earth_demi_human_queen",
+      "i18nKey": "poi.shifting_earth_demi_human_queen",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Demi-Human Queen",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "16900",
+      "id": "shifting_earth_demi_human_swordmaster",
+      "i18nKey": "poi.shifting_earth_demi_human_swordmaster",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Demi-Human Swordmaster",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "17000",
+      "id": "shifting_earth_dragonkin_soldier",
+      "i18nKey": "poi.shifting_earth_dragonkin_soldier",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Dragonkin Soldier",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "17100",
+      "id": "shifting_earth_fallingstar_beast",
+      "i18nKey": "poi.shifting_earth_fallingstar_beast",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Fallingstar Beast",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "17200",
+      "id": "shifting_earth_fire_prelates",
+      "i18nKey": "poi.shifting_earth_fire_prelates",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Fire Prelates",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "17300",
+      "id": "shifting_earth_flying_dragon",
+      "i18nKey": "poi.shifting_earth_flying_dragon",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Flying Dragon",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "17400",
+      "id": "shifting_earth_giant_crows",
+      "i18nKey": "poi.shifting_earth_giant_crows",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Giant Crows",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "17500",
+      "id": "shifting_earth_golden_hippopotamus",
+      "i18nKey": "poi.shifting_earth_golden_hippopotamus",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Golden Hippopotamus",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "17600",
+      "id": "shifting_earth_headless_troll",
+      "i18nKey": "poi.shifting_earth_headless_troll",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Headless Troll",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "17700",
+      "id": "shifting_earth_magma_wyrm",
+      "i18nKey": "poi.shifting_earth_magma_wyrm",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Magma Wyrm",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "17800",
+      "id": "shifting_earth_mountaintop_ice_dragon",
+      "i18nKey": "poi.shifting_earth_mountaintop_ice_dragon",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Mountaintop Ice Dragon",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "17900",
+      "id": "shifting_earth_red_wolf",
+      "i18nKey": "poi.shifting_earth_red_wolf",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Red Wolf",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "18000",
+      "id": "shifting_earth_royal_carian_knight",
+      "i18nKey": "poi.shifting_earth_royal_carian_knight",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Royal Carian Knight",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "18100",
+      "id": "shifting_earth_royal_revenant",
+      "i18nKey": "poi.shifting_earth_royal_revenant",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Royal Revenant",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "18200",
+      "id": "shifting_earth_snowfield_trolls",
+      "i18nKey": "poi.shifting_earth_snowfield_trolls",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Snowfield Trolls",
+      "icon": "assets/icon/landmark/field_boss.png"
+    },
+    {
+      "cid": "18300",
+      "id": "shifting_earth_valiant_gargoyle",
+      "i18nKey": "poi.shifting_earth_valiant_gargoyle",
+      "category": "Shifting_Earth",
+      "name": "Shifting_Earth - Valiant Gargoyle",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
+    },
+    {
+      "cid": "18400",
+      "id": "shifting_earth_flying_dragon_elite",
+      "name": "Shifting_Earth - Flying Dragon (Elite)",
+      "category": "Shifting_Earth",
+      "i18nKey": "poi.shifting_earth_flying_dragon_elite",
+      "icon": "assets/icon/landmark/field_boss_elite.png"
     }
   ]
 }

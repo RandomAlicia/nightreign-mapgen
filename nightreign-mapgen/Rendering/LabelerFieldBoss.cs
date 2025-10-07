@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using System.Text.Json;
 using ImageMagick;
@@ -29,7 +30,6 @@ namespace NightReign.MapGen.Rendering
             using var doc = JsonDocument.Parse(File.ReadAllText(appsettingsPath));
             var root = doc.RootElement;
 
-            // i18n
             var i18nFolder = root.TryGetProperty("I18nFolder", out var i18nF) && i18nF.ValueKind == JsonValueKind.String
                 ? i18nF.GetString()! : "../i18n";
             var i18nLang = root.TryGetProperty("I18nLang", out var i18nL) && i18nL.ValueKind == JsonValueKind.String
@@ -40,9 +40,16 @@ namespace NightReign.MapGen.Rendering
             var coordOverrides = ReadCoordOverrides(root, out double epsilon);
             var castleReanchor = ReadCastleReanchor(root, out bool hasCastleReanchor);
 
+            var poiList = pois.ToList();
+// Hardcoded gating: allow shifting (406.2,-10.3) only for pattern files that contain (336.0,-46.0)
+bool shiftAllowed = poiList.Any(p => {
+    var s = select(p);
+    return System.Math.Round(s.x, 1) == 336.0 && System.Math.Round(s.z, 1) == -46.0;
+});
+
             int total = 0, drawn = 0, missingI18n = 0;
 
-            foreach (var poi in pois)
+            foreach (var poi in poiList)
             {
                 var (rawName, x0, z0) = select(poi);
                 if (string.IsNullOrWhiteSpace(rawName)) continue;
@@ -54,13 +61,35 @@ namespace NightReign.MapGen.Rendering
                 else if (rawName.StartsWith(PFX_CASTLE, StringComparison.Ordinal)) kind = "Castle";
                 else continue;
 
+                
+                // Per-coordinate anchor from config (left/right/center), matched with epsilon in world units
+                string? anchorStr = null;
+                if (root.TryGetProperty("LabelOverrides", out var lo) && lo.ValueKind == JsonValueKind.Object &&
+                    lo.TryGetProperty("FieldBoss", out var fb) && fb.ValueKind == JsonValueKind.Object &&
+                    fb.TryGetProperty("ByCoord", out var bc) && bc.ValueKind == JsonValueKind.Object)
+                {
+                    foreach (var kv in bc.EnumerateObject())
+                    {
+                        var parts = kv.Name.Split(',');
+                        if (parts.Length != 2) continue;
+                        if (!double.TryParse(parts[0], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double xC)) continue;
+                        if (!double.TryParse(parts[1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double zC)) continue;
+                        if (Math.Abs(xC - x0) <= epsilon && Math.Abs(zC - z0) <= epsilon)
+                        {
+                            var val = kv.Value;
+                            if (val.ValueKind == JsonValueKind.Object &&
+                                val.TryGetProperty("Anchor", out var anEl) && anEl.ValueKind == JsonValueKind.String)
+                                anchorStr = anEl.GetString();
+                            break;
+                        }
+                    }
+                }
                 total++;
 
                 var label = LabelTextResolver.Resolve(rawName, indexLookup, i18nFolder, i18nLang, cwd);
                 if (string.IsNullOrWhiteSpace(label)) { missingI18n++; continue; }
                 label = label.Replace("\\n", "\n");
 
-                // Effective anchor coords
                 double useX = x0, useZ = z0;
                 if (kind == "Castle" && hasCastleReanchor)
                 {
@@ -70,20 +99,27 @@ namespace NightReign.MapGen.Rendering
 
                 var (px, py) = mapXZtoPxPy(useX, useZ);
 
-                // Default per-type offset
-                var (dx, dy) = typeOffsets.TryGetValue(kind, out var od) ? od : (0, 0);
+                var (baseDx, baseDy) = typeOffsets.TryGetValue(kind, out var od) ? od : (0, 0);
+                var (dx, dy) = (baseDx, baseDy);
 
-                // Coordinate override?
                 if (TryFindCoordOverride(coordOverrides, x0, z0, epsilon, out var co))
                 {
                     dx = co.dx;
                     dy = co.dy;
                 }
+                // Special-case: only allow shifting (406.2,-10.3) when this pattern contains (336.0,-46.0)
+                bool isTarget = (System.Math.Round(x0, 1) == 406.2 && System.Math.Round(z0, 1) == -10.3);
+                if (isTarget && !shiftAllowed)
+                {
+                    // revert to base offset and disable any anchor shift tied to this point
+                    dx = baseDx;
+                    dy = baseDy;
+                    anchorStr = null;
+                }
 
-                // Style selection
                 string styleName = defaultStyle;
                 if (typeStyles.TryGetValue(kind, out var styleOverride) && !string.IsNullOrWhiteSpace(styleOverride))
-                    styleName = styleOverride; // e.g., Castle -> poiCastle
+                    styleName = styleOverride; // Castle -> poiCastle
                 if (co.style != null) styleName = co.style;
 
                 var (fontPath, fontSize, fill, glow) = ReadTextStyle(root, styleName, cwd);
@@ -91,7 +127,42 @@ namespace NightReign.MapGen.Rendering
                 int cx = px + dx;
                 int cy = py + dy;
 
-                if (label.IndexOf('\n') >= 0)
+                
+                
+                // Anchor adjustment: align left/right edge to (cx,cy); default is center
+                if (!string.IsNullOrEmpty(anchorStr))
+                {
+                    using var meas = new MagickImage(MagickColors.Transparent, 1, 1);
+                    meas.Settings.Font = fontPath;
+                    meas.Settings.FontPointsize = fontSize;
+
+                    int measureWidth()
+                    {
+                        if (label.IndexOf('\n') >= 0)
+                        {
+                            int maxW = 0;
+                            foreach (var line in label.Split('\n'))
+                            {
+                                var m = meas.FontTypeMetrics(line);
+                                int wline = (int)Math.Ceiling(m.TextWidth);
+                                if (wline > maxW) maxW = wline;
+                            }
+                            return maxW;
+                        }
+                        else
+                        {
+                            var tm = meas.FontTypeMetrics(label);
+                            return (int)Math.Ceiling(tm.TextWidth);
+                        }
+                    }
+
+                    var anch = anchorStr.Trim().ToLowerInvariant();
+                    if (anch == "right")
+                        cx -= measureWidth() / 2;
+                    else if (anch == "left")
+                        cx += measureWidth() / 2;
+                }
+if (label.IndexOf('\n') >= 0)
                 {
                     TextRenderer.DrawMultilineWithGlow(
                         background,
@@ -129,8 +200,6 @@ namespace NightReign.MapGen.Rendering
 
             Console.WriteLine($"[FieldBoss Labels] total={total} drawn={drawn} missingI18n={missingI18n}");
         }
-
-        // ---------- helpers ----------
 
         private static (string fontPath, int fontSize, MagickColor fill, TextRenderer.GlowStyle? glow)
             ReadTextStyle(JsonElement root, string styleName, string cwd)
@@ -249,7 +318,7 @@ namespace NightReign.MapGen.Rendering
         private static List<(double x, double z, int dx, int dy, string? style)> ReadCoordOverrides(JsonElement root, out double epsilon)
         {
             var list = new List<(double x, double z, int dx, int dy, string? style)>();
-            epsilon = 0.25; // default tolerance
+            epsilon = 0.25;
 
             if (root.TryGetProperty("LabelOverrides", out var lo) && lo.ValueKind == JsonValueKind.Object &&
                 lo.TryGetProperty("FieldBoss", out var fb) && fb.ValueKind == JsonValueKind.Object)
@@ -261,9 +330,7 @@ namespace NightReign.MapGen.Rendering
                 {
                     foreach (var kv in bc.EnumerateObject())
                     {
-                        // key: "x,z"
-                        var key = kv.Name;
-                        var parts = key.Split(',');
+                        var parts = kv.Name.Split(',');
                         if (parts.Length != 2) continue;
                         if (!double.TryParse(parts[0], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double x))
                             continue;
