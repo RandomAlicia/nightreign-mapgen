@@ -6,7 +6,7 @@
       "i18nKey": "poi.arena_boss_ancient_hero_of_zamor",
       "category": "Arena_Boss",
       "name": "Arena_Boss - Ancient Hero of Zamor",
-      "icon": "assets/icon/landmark/field_boss_elite.png"
+      "icon": "assets/icon/landmark/field_boss.png"
     },
     {
       "cid": "00100",
@@ -22,7 +22,7 @@
       "i18nKey": "poi.arena_boss_black_knife_assassin",
       "category": "Arena_Boss",
       "name": "Arena_Boss - Black Knife Assassin",
-      "icon": "assets/icon/landmark/field_boss_elite.png"
+      "icon": "assets/icon/landmark/field_boss.png"
     },
     {
       "cid": "00300",
@@ -30,7 +30,7 @@
       "i18nKey": "poi.arena_boss_grafted_scion",
       "category": "Arena_Boss",
       "name": "Arena_Boss - Grafted Scion",
-      "icon": "assets/icon/landmark/field_boss_elite.png"
+      "icon": "assets/icon/landmark/field_boss.png"
     },
     {
       "cid": "00400",
@@ -38,7 +38,7 @@
       "i18nKey": "poi.arena_boss_leonine_misbegotten",
       "category": "Arena_Boss",
       "name": "Arena_Boss - Leonine Misbegotten",
-      "icon": "assets/icon/landmark/field_boss_elite.png"
+      "icon": "assets/icon/landmark/field_boss.png"
     },
     {
       "cid": "00500",
@@ -46,7 +46,7 @@
       "i18nKey": "poi.arena_boss_red_wolf",
       "category": "Arena_Boss",
       "name": "Arena_Boss - Red Wolf",
-      "icon": "assets/icon/landmark/field_boss_elite.png"
+      "icon": "assets/icon/landmark/field_boss.png"
     },
     {
       "cid": "00600",
@@ -54,7 +54,7 @@
       "i18nKey": "poi.arena_boss_royal_revenant",
       "category": "Arena_Boss",
       "name": "Arena_Boss - Royal Revenant",
-      "icon": "assets/icon/landmark/field_boss_elite.png"
+      "icon": "assets/icon/landmark/field_boss.png"
     },
     {
       "cid": "00700",
@@ -118,7 +118,7 @@
       "i18nKey": "poi.castle_banished_knights",
       "category": "Castle",
       "name": "Castle - Banished Knights",
-      "icon": "assets/icon/landmark/field_boss.png"
+      "icon": ""
     },
     {
       "cid": "01500",
@@ -126,7 +126,7 @@
       "i18nKey": "poi.castle_crucible_knights",
       "category": "Castle",
       "name": "Castle - Crucible Knights",
-      "icon": "assets/icon/landmark/field_boss.png"
+      "icon": ""
     },
     {
       "cid": "01600",
@@ -134,7 +134,7 @@
       "i18nKey": "poi.castle_trolls",
       "category": "Castle",
       "name": "Castle - Trolls",
-      "icon": "assets/icon/landmark/field_boss.png"
+      "icon": ""
     },
     {
       "cid": "01700",
@@ -1094,7 +1094,7 @@
       "i18nKey": "poi.sorcerers_rise_above_door_teleporting_trees_missing_statue",
       "category": "Difficult_Sorcerers_Rise",
       "name": "Sorcerers_Rise - Above Door, Teleporting Trees, Missing Statue",
-      "icon": "assets/icon/landmark/ancient_rise.png"
+      "icon": "assets/icon/landmark/ancient_rise_glow.png"
     },
     {
       "cid": "13700",
@@ -1110,7 +1110,7 @@
       "i18nKey": "poi.sorcerers_rise_fake_building_pool_reflection_second_floor",
       "category": "Difficult_Sorcerers_Rise",
       "name": "Sorcerers_Rise - Fake Building, Pool Reflection, Second Floor",
-      "icon": "assets/icon/landmark/ancient_rise.png"
+      "icon": "assets/icon/landmark/ancient_rise_glow.png"
     },
     {
       "cid": "13900",
@@ -1118,7 +1118,7 @@
       "i18nKey": "poi.sorcerers_rise_fake_building_right_of_door_unlit_candle",
       "category": "Difficult_Sorcerers_Rise",
       "name": "Sorcerers_Rise - Fake Building, Right of Door, Unlit Candle",
-      "icon": "assets/icon/landmark/ancient_rise.png"
+      "icon": "assets/icon/landmark/ancient_rise_glow.png"
     },
     {
       "cid": "14000",
@@ -1150,7 +1150,7 @@
       "i18nKey": "poi.sorcerers_rise_imp_statue_teleporting_trees_fleeing_stump",
       "category": "Difficult_Sorcerers_Rise",
       "name": "Sorcerers_Rise - Imp Statue, Teleporting Trees, Fleeing Stump",
-      "icon": "assets/icon/landmark/ancient_rise.png"
+      "icon": "assets/icon/landmark/ancient_rise_glow.png"
     },
     {
       "cid": "14400",
@@ -1158,7 +1158,7 @@
       "i18nKey": "poi.sorcerers_rise_imp_statue_windy_trees_second_floor",
       "category": "Difficult_Sorcerers_Rise",
       "name": "Sorcerers_Rise - Imp Statue, Windy Trees, Second Floor",
-      "icon": "assets/icon/landmark/ancient_rise.png"
+      "icon": "assets/icon/landmark/ancient_rise_glow.png"
     },
     {
       "cid": "14500",
@@ -1182,7 +1182,7 @@
       "i18nKey": "poi.sorcerers_rise_rear_withered_trees_right_of_door_missing_statue",
       "category": "Difficult_Sorcerers_Rise",
       "name": "Sorcerers_Rise - Rear Withered Trees, Right of Door, Missing Statue",
-      "icon": "assets/icon/landmark/ancient_rise.png"
+      "icon": "assets/icon/landmark/ancient_rise_glow.png"
     },
     {
       "cid": "14800",

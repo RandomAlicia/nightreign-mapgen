@@ -6,14 +6,30 @@
   "Special Event": "",
   "pois": [
     {
-      "x": -90.4,
+      "x": -38.3,
       "z": -65.3,
       "name": "Arena_Boss - Leonine Misbegotten",
-      "dupCount": 2,
-      "names": [
-        "Arena_Boss - Leonine Misbegotten",
-        "Strong_Field_Boss - Magma Wyrm"
-      ]
+      "note": "Split from original combined Arena_Boss entry for plotting convenience (fixed x,z).",
+      "meta": {
+        "split_from_name": "Arena_Boss - Leonine Misbegotten",
+        "original_coords": {
+          "x": -90.4,
+          "z": -65.3
+        }
+      }
+    },
+    {
+      "x": -90.4,
+      "z": -65.3,
+      "name": "Strong_Field_Boss - Magma Wyrm",
+      "note": "Split from original combined Arena_Boss entry for plotting convenience (fixed x,z).",
+      "meta": {
+        "split_from_name": "Arena_Boss - Leonine Misbegotten",
+        "original_coords": {
+          "x": -90.4,
+          "z": -65.3
+        }
+      }
     },
     {
       "x": -157.0,
@@ -179,6 +195,25 @@
       "x": -450.0,
       "z": -84.0,
       "name": "Township - Township"
+    }
+  ],
+  "_split_log": [
+    {
+      "message": "For the convenience of plotting, an original combined Arena_Boss entry was split into two entries with fixed positions.",
+      "original_poi": {
+        "x": -90.4,
+        "z": -65.3,
+        "name": "Arena_Boss - Leonine Misbegotten",
+        "dupCount": 2,
+        "names": [
+          "Arena_Boss - Leonine Misbegotten",
+          "Strong_Field_Boss - Magma Wyrm"
+        ]
+      },
+      "created_entries": [
+        "Arena_Boss - Leonine Misbegotten",
+        "Strong_Field_Boss - Magma Wyrm"
+      ]
     }
   ]
 }

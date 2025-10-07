@@ -6,14 +6,30 @@
   "Special Event": "Day 1 Extra Night Boss",
   "pois": [
     {
-      "x": -90.4,
+      "x": -38.3,
       "z": -65.3,
       "name": "Arena_Boss - Ancient Hero of Zamor",
-      "dupCount": 2,
-      "names": [
-        "Arena_Boss - Ancient Hero of Zamor",
-        "Strong_Field_Boss - Royal Carian Knight"
-      ]
+      "note": "Split from original combined Arena_Boss entry for plotting convenience (fixed x,z).",
+      "meta": {
+        "split_from_name": "Arena_Boss - Ancient Hero of Zamor",
+        "original_coords": {
+          "x": -90.4,
+          "z": -65.3
+        }
+      }
+    },
+    {
+      "x": -90.4,
+      "z": -65.3,
+      "name": "Strong_Field_Boss - Royal Carian Knight",
+      "note": "Split from original combined Arena_Boss entry for plotting convenience (fixed x,z).",
+      "meta": {
+        "split_from_name": "Arena_Boss - Ancient Hero of Zamor",
+        "original_coords": {
+          "x": -90.4,
+          "z": -65.3
+        }
+      }
     },
     {
       "x": -157.0,
@@ -194,6 +210,25 @@
       "x": -290.7,
       "z": -495.4,
       "name": "Strong_Field_Boss - Ulcerated Tree Spirit"
+    }
+  ],
+  "_split_log": [
+    {
+      "message": "For the convenience of plotting, an original combined Arena_Boss entry was split into two entries with fixed positions.",
+      "original_poi": {
+        "x": -90.4,
+        "z": -65.3,
+        "name": "Arena_Boss - Ancient Hero of Zamor",
+        "dupCount": 2,
+        "names": [
+          "Arena_Boss - Ancient Hero of Zamor",
+          "Strong_Field_Boss - Royal Carian Knight"
+        ]
+      },
+      "created_entries": [
+        "Arena_Boss - Ancient Hero of Zamor",
+        "Strong_Field_Boss - Royal Carian Knight"
+      ]
     }
   ]
 }

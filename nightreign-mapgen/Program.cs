@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Collections.Generic;
+using System.Text.Json;
 using ImageMagick;
 
 namespace NightReign.MapGen
@@ -155,8 +157,107 @@ namespace NightReign.MapGen
 
                 // 11) POIs - Night Bosses
                 NightBossRenderer.Render(background, patternDoc, indexLookup, cfg, cwd);
+                // 12) Labels - Major Base (Camp/Fort/Great_Church/Ruins)
+                try
+                {
+                    // Convert indexLookup to <string, object> for resolver compatibility
+                    var indexObj = new Dictionary<string, object>(StringComparer.Ordinal);
+                    foreach (var kv in indexLookup)
+                    {
+                        var v = kv.Value;
+                        string k = kv.Key;
+                        try
+                        {
+                            var t = v.GetType();
+                            var nameProp = t.GetProperty("name") ?? t.GetProperty("Name");
+                            if (nameProp != null)
+                            {
+                                var nameVal = nameProp.GetValue(v) as string;
+                                if (!string.IsNullOrWhiteSpace(nameVal)) k = nameVal;
+                            }
+                        }
+                        catch { }
+                        indexObj[k] = v;
+                    }
+                    NightReign.MapGen.Rendering.LabelerMajorBase.Label(
+                        background,
+                        patternDoc.pois,
+                        p => (p.name, p.x, p.z),
+                        indexObj,
+                        Path.Combine(cwd, "appsettings.json"),
+                        cwd,
+                        WorldToPxPy1536,
+                        "poiStandard"
+                    );
+
+// 12b) Labels - Minor Base (Sorcerers_Rise)
+try
+{
+    // Prepare index lookup matching by 'name' like MajorBase
+    var indexObj2 = new Dictionary<string, object>(StringComparer.Ordinal);
+    foreach (var kv in indexLookup)
+    {
+        var v = kv.Value;
+        string k = kv.Key;
+        try
+        {
+            var t = v.GetType();
+            var nameProp = t.GetProperty("name") ?? t.GetProperty("Name");
+            if (nameProp != null)
+            {
+                var nameVal = nameProp.GetValue(v) as string;
+                if (!string.IsNullOrWhiteSpace(nameVal)) k = nameVal;
+            }
+        }
+        catch { }
+        indexObj2[k] = v;
+    }
+
+    NightReign.MapGen.Rendering.LabelerMinorBase.Label(
+        background,
+        patternDoc.pois,
+        p => (p.name, p.x, p.z),
+        indexObj2,
+        Path.Combine(cwd, "appsettings.json"),
+        cwd,
+        WorldToPxPy1536,
+        "poiStandard"
+    );
+}
+catch (Exception e)
+{
+    Console.WriteLine($"[MinorBase Labels] skipped: {e.Message}");
+}
+
+// 12c) Labels - Evergaol
+try
+{
+    // Reuse indexObj built for MajorBase (name-keyed) so resolver matches by 'name'
+    NightReign.MapGen.Rendering.LabelerEvergaol.Label(
+        background,
+        patternDoc.pois,
+        p => (p.name, p.x, p.z),
+        indexObj,
+        Path.Combine(cwd, "appsettings.json"),
+        cwd,
+        WorldToPxPy1536,
+        "poiStandard"
+    );
+}
+catch (Exception e)
+{
+    Console.WriteLine($"[Evergaol Labels] skipped: {e.Message}");
+}
+
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"[MajorBase Labels] skipped: {e.Message}");
+                }
 
                 // Save
+
                 background.Format = MagickFormat.Png;
                 var outputPath = System.IO.Path.Combine(outputFolder, $"{id}.png");
                 background.Write(outputPath);
@@ -170,5 +271,81 @@ namespace NightReign.MapGen
                 return 2;
             }
         }
+        
+        // Helper: convert hex to MagickColor (#RRGGBB or #RRGGBBAA, STRICT RRGGBBAA for 8 digits)
+        private static ImageMagick.MagickColor ParseHexToMagickColor(string hex)
+        {
+            if (string.IsNullOrWhiteSpace(hex)) return ImageMagick.MagickColors.White;
+            var s = hex.Trim();
+            if (s.StartsWith("#")) s = s.Substring(1);
+
+            byte r = 255, g = 255, b = 255, a = 255;
+
+            if (s.Length == 6)
+            {
+                r = Convert.ToByte(s.Substring(0, 2), 16);
+                g = Convert.ToByte(s.Substring(2, 2), 16);
+                b = Convert.ToByte(s.Substring(4, 2), 16);
+            }
+            else if (s.Length == 8)
+            {
+                // STRICT: interpret as RRGGBBAA (no AARRGGBB heuristic)
+                r = Convert.ToByte(s.Substring(0, 2), 16);
+                g = Convert.ToByte(s.Substring(2, 2), 16);
+                b = Convert.ToByte(s.Substring(4, 2), 16);
+                a = Convert.ToByte(s.Substring(6, 2), 16);
+            }
+            else
+            {
+                return ImageMagick.MagickColors.White;
+            }
+
+            return new ImageMagick.MagickColor(r, g, b, a);
+        }
+
+        // Map world (x,z) to pixel (px,py) on a 1536×1536 canvas: px = 768 + x, py = 768 - z
+        private static (int px, int py) WorldToPxPy1536(double x, double z)
+        {
+            int px = (int)Math.Round(768.0 + x);
+            int py = (int)Math.Round(768.0 - z);
+            return (px, py);
+        }
+
+        // Generic selector for POIs that extracts (name, x, z) using reflection.
+        private static (string name, double x, double z) SelectNameXZ(object poi)
+        {
+            if (poi == null) return (string.Empty, 0, 0);
+            var t = poi.GetType();
+
+            // name / Name
+            var nameProp = t.GetProperty("name") ?? t.GetProperty("Name");
+            string name = nameProp?.GetValue(poi) as string ?? string.Empty;
+
+            // pos / Pos -> x/X, z/Z
+            var posProp = t.GetProperty("pos") ?? t.GetProperty("Pos");
+            object pos = posProp?.GetValue(poi);
+            double x = 0, z = 0;
+
+            if (pos != null)
+            {
+                var pt = pos.GetType();
+                var xProp = pt.GetProperty("x") ?? pt.GetProperty("X");
+                var zProp = pt.GetProperty("z") ?? pt.GetProperty("Z");
+
+                if (xProp != null)
+                {
+                    var xv = xProp.GetValue(pos);
+                    x = xv is double xd ? xd : Convert.ToDouble(xv);
+                }
+                if (zProp != null)
+                {
+                    var zv = zProp.GetValue(pos);
+                    z = zv is double zd ? zd : Convert.ToDouble(zv);
+                }
+            }
+
+            return (name, x, z);
+        }
+
     }
 }

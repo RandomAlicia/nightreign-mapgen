@@ -40,6 +40,7 @@ namespace NightReign.MapGen
         public string? name { get; set; }
         public string? category { get; set; }
         public string? icon { get; set; }
+        public string? i18nKey { get; set; }
         public string? cid { get; set; }
         public string? id { get; set; }
     }

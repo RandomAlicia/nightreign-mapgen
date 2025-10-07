@@ -31,6 +31,7 @@ namespace NightReign.MapGen
                     "Church"          => cfg.MinorBase.Church,
                     "Small_Camp"      => cfg.MinorBase.Small_Camp,
                     "Sorcerers_Rise"  => cfg.MinorBase.Sorcerers_Rise,
+                    "Difficult_Sorcerers_Rise" => cfg.MinorBase.Sorcerers_Rise,
                     "Township"        => cfg.MinorBase.Township,
                     _ => null
                 };
