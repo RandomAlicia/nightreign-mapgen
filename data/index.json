@@ -166,7 +166,7 @@
       "i18nKey": "poi.church_rotted",
       "category": "Church",
       "name": "Church - Rotted",
-      "icon": "assets/icon/landmark/church.png"
+      "icon": ""
     },
     {
       "cid": "02100",

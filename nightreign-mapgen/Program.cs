@@ -118,17 +118,6 @@ namespace NightReign.MapGen
                     }
                 }
 
-                // 4b) Spawn point overlay (full canvas) based on summary.spawn_point_id
-                {
-                    var spawnFile = MapSpawnOverlay(patSummary.Spawn_Point_Id);
-                    if (spawnFile != null)
-                    {
-                        var spawnFolder = ResolvePath("../assets/map/spawn_point", cwd);
-                        var spawnPath = System.IO.Path.Combine(spawnFolder, spawnFile);
-                        CompositeFullCanvasIfExists(background, spawnPath);
-                    }
-                }
-
                 // 5) Nightlord emblem (anchored)
                 if (!string.IsNullOrWhiteSpace(cfg.NightlordFolder) && !string.IsNullOrWhiteSpace(patSummary.Nightlord))
                 {
@@ -321,22 +310,6 @@ catch (Exception e)
                 {
                     Console.WriteLine($"[SpecialEvent Banner] skipped: {exSEB.Message}");
                 }
-                // 12g) Special Event Banner (bottom-centered)
-                try
-                {
-                    NightReign.MapGen.Rendering.LabelerSpecialEvent.Label(
-                        background,
-                        patternId: id,
-                        appsettingsPath: System.IO.Path.Combine(cwd, "appsettings.json"),
-                        cwd: cwd,
-                        bottomMarginPx: 24
-                    );
-                }
-catch (Exception exSE)
-                {
-                    Console.WriteLine($"[ShiftingEarth Labels] skipped: {exSE.Message}");
-                }
-
 
 
 
@@ -362,6 +335,17 @@ catch (Exception exSE)
                     Console.WriteLine($"[SpecialIcon] skipped: {exSI.Message}");
                 }
 
+                                // 4b) Spawn point overlay (full canvas) based on summary.spawn_point_id
+                {
+                    var spawnFile = MapSpawnOverlay(patSummary.Spawn_Point_Id);
+                    if (spawnFile != null)
+                    {
+                        var spawnFolder = ResolvePath("../assets/map/spawn_point", cwd);
+                        var spawnPath = System.IO.Path.Combine(spawnFolder, spawnFile);
+                        CompositeFullCanvasIfExists(background, spawnPath);
+                    }
+                }
+
 
                 // 12i) Signature overlay (full canvas, already fitted)
                 try
@@ -373,6 +357,83 @@ catch (Exception exSE)
                 {
                     Console.WriteLine($"[Signature] skipped: {exSIG.Message}");
                 }
+
+                // 12j) ID stamp (bottom-right, style Text->Styles->id)
+                try
+                {
+                    // Derive id from filename if needed (pattern_XXX.json -> XXX)
+                    string idText = id;
+                    if (string.IsNullOrWhiteSpace(idText) || idText.Length != 3)
+                    {
+                        var m = System.Text.RegularExpressions.Regex.Match(patternPath ?? string.Empty, @"pattern_(\d{3})\.json", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                        if (m.Success) idText = m.Groups[1].Value;
+                    }
+
+                    // Load style from appsettings.json
+                    var appPath = System.IO.Path.Combine(cwd, "appsettings.json");
+                    using var appFs = File.OpenRead(appPath);
+                    using var appDoc = System.Text.Json.JsonDocument.Parse(appFs);
+                    var appRoot = appDoc.RootElement;
+
+                    int idFontSize = 25;
+                    string idFill = "#FFFFFFFF";
+                    string? idFontPath = null;
+
+                    if (appRoot.TryGetProperty("Text", out var textEl) && textEl.ValueKind == System.Text.Json.JsonValueKind.Object)
+                    {
+                        if (textEl.TryGetProperty("Styles", out var styles) && styles.ValueKind == System.Text.Json.JsonValueKind.Object)
+                        {
+                            if (styles.TryGetProperty("id", out var idStyle) && idStyle.ValueKind == System.Text.Json.JsonValueKind.Object)
+                            {
+                                if (idStyle.TryGetProperty("FontSizePx", out var fs) && fs.ValueKind == System.Text.Json.JsonValueKind.Number)
+                                    idFontSize = fs.GetInt32();
+                                if (idStyle.TryGetProperty("Fill", out var fill) && fill.ValueKind == System.Text.Json.JsonValueKind.String)
+                                    idFill = fill.GetString() ?? idFill;
+                                if (idStyle.TryGetProperty("FontPath", out var fp) && fp.ValueKind == System.Text.Json.JsonValueKind.String)
+                                {
+                                    var cand = fp.GetString();
+                                    if (!string.IsNullOrWhiteSpace(cand))
+                                        idFontPath = System.IO.Path.IsPathRooted(cand) ? cand : ResolvePath(cand, cwd);
+                                }
+                            }
+                        }
+                    }
+
+                    // Fallback font if the style didn't provide one
+                    if (string.IsNullOrWhiteSpace(idFontPath))
+                    {
+                        var notoCand = ResolvePath("../assets/font/NotoSans-Regular.ttf", cwd);
+                        if (File.Exists(notoCand)) idFontPath = notoCand;
+                    }
+
+                    // Render label image and composite at bottom-right
+                    var settings = new ImageMagick.MagickReadSettings
+                    {
+                        Font = idFontPath,
+                        FontPointsize = idFontSize,
+                        FillColor = ParseHexToMagickColor(idFill),
+                        BackgroundColor = ImageMagick.MagickColors.Transparent,
+                        TextEncoding = System.Text.Encoding.UTF8
+                    };
+                    using var labelImg = new ImageMagick.MagickImage($"label:{idText}", settings);
+                    if (labelImg.Width > 0 && labelImg.Height > 0)
+                    {
+                        // Hard-coded margins for the ID stamp
+                        const int padRightPx  = 20;  // <- set your right margin here
+                        const int padBottomPx = 15;  // <- set your bottom margin here
+
+                        int x = (int)background.Width  - (int)labelImg.Width  - padRightPx;
+                        int y = (int)background.Height - (int)labelImg.Height - padBottomPx;
+                        if (x < 0) x = 0;
+                        if (y < 0) y = 0;
+                        background.Composite(labelImg, x, y, ImageMagick.CompositeOperator.Over);
+                    }
+                }
+                catch (Exception exID)
+                {
+                    Console.WriteLine($"[ID Stamp] skipped: {exID.Message}");
+                }
+
 
 // Save
 
