@@ -46,7 +46,7 @@ namespace NightReign.MapGen.Rendering
 
             // Base offsets and coord overrides
             var (baseDx, baseDy) = ReadTypeOffsets(root);
-            var (epsilonPx, coordOverrides) = ReadCoordOverrides(root);
+            var (epsilonWorld, epsilonPx, coordOverrides) = ReadOverridesSE(root);
 
             // i18n
             var poiStrings = LoadPoiStrings(root, cwd);
@@ -93,13 +93,18 @@ namespace NightReign.MapGen.Rendering
                 string? overrideStyleName = null;
                 string? anchor = null;
 
-                // Per-coordinate overrides (pixel match with epsilon)
-                if (TryMatchCoordOverride(coordOverrides, px, py, epsilonPx, out var ov))
+                // Per-coordinate overrides: try world (x,z) first, then pixel (px,py)
+                if ((el.TryGetProperty("x", out var xEl) && xEl.ValueKind == JsonValueKind.Number) &&
+                    (el.TryGetProperty("z", out var zEl) && zEl.ValueKind == JsonValueKind.Number))
                 {
-                    dx = ov.dx; dy = ov.dy;
-                    overrideStyleName = ov.style;
-                    anchor = ov.anchor;
+                    double wx = xEl.GetDouble(), wz = zEl.GetDouble();
+                    if (TryMatchWorldOverrideSE(coordOverrides, wx, wz, epsilonWorld, out var ovW))
+                    { dx = ovW.dx; dy = ovW.dy; overrideStyleName = ovW.style; anchor = ovW.anchor; }
+                    else if (TryMatchPixelOverrideSE(coordOverrides, px, py, epsilonPx, out var ovP))
+                    { dx = ovP.dx; dy = ovP.dy; overrideStyleName = ovP.style; anchor = ovP.anchor; }
                 }
+                else if (TryMatchPixelOverrideSE(coordOverrides, px, py, epsilonPx, out var ov))
+                { dx = ov.dx; dy = ov.dy; overrideStyleName = ov.style; anchor = ov.anchor; }
 
                 // Pick style to render
                 var renderStyle = baseStyle;
@@ -338,5 +343,106 @@ namespace NightReign.MapGen.Rendering
             }
             return null;
         }
-    }
+    
+        // ---- Shifting_Earth overrides: world (x,z) and pixel (px,py) ----
+        private sealed class CoordOverrideSE
+        {
+            public double? x; public double? z;
+            public int? px; public int? py;
+            public int dx; public int dy;
+            public string? style;
+            public string? anchor;
+        }
+
+        private static (double epsWorld, double epsPx, System.Collections.Generic.List<CoordOverrideSE> list)
+            ReadOverridesSE(JsonElement root)
+        {
+            double epsWorld = 1.0; // default like FieldBoss
+            double epsPx = 0.0;
+            var list = new System.Collections.Generic.List<CoordOverrideSE>();
+
+            if (root.TryGetProperty("LabelOverrides", out var lo) && lo.ValueKind == JsonValueKind.Object &&
+                lo.TryGetProperty("Shifting_Earth", out var se) && se.ValueKind == JsonValueKind.Object)
+            {
+                if (se.TryGetProperty("EpsilonWorld", out var ew) && ew.ValueKind == JsonValueKind.Number)
+                    epsWorld = ew.GetDouble();
+                if (se.TryGetProperty("EpsilonPx", out var ep) && ep.ValueKind == JsonValueKind.Number)
+                    epsPx = ep.GetDouble();
+                if (se.TryGetProperty("Epsilon", out var e) && e.ValueKind == JsonValueKind.Number)
+                {
+                    var v = e.GetDouble();
+                    if (!(se.TryGetProperty("EpsilonWorld", out _))) epsWorld = v;
+                    if (!(se.TryGetProperty("EpsilonPx", out _))) epsPx = v;
+                }
+
+                if (se.TryGetProperty("ByCoord", out var bc) && bc.ValueKind == JsonValueKind.Object)
+                {
+                    foreach (var kv in bc.EnumerateObject())
+                    {
+                        var key = kv.Name.Trim();
+                        key = key.Trim().TrimEnd(',');
+                        var parts = key.Split(',');
+                        if (parts.Length < 2) continue;
+
+                        bool looksWorld = parts[0].Contains('.') || parts[1].Contains('.');
+
+                        int dx = 0, dy = 0;
+                        string? style = null, anchor = null;
+                        var val = kv.Value;
+                        if (val.ValueKind == JsonValueKind.Object)
+                        {
+                            if (val.TryGetProperty("dx", out var dxEl) && dxEl.TryGetInt32(out var dxVal)) dx = dxVal;
+                            if (val.TryGetProperty("dy", out var dyEl) && dyEl.TryGetInt32(out var dyVal)) dy = dyVal;
+                            if (val.TryGetProperty("style", out var stEl) && stEl.ValueKind == JsonValueKind.String) style = stEl.GetString();
+                            if (val.TryGetProperty("Anchor", out var anEl) && anEl.ValueKind == JsonValueKind.String) anchor = anEl.GetString();
+                        }
+
+                        var item = new CoordOverrideSE { dx = dx, dy = dy, style = style, anchor = anchor };
+                        if (looksWorld)
+                        {
+                            if (double.TryParse(parts[0], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var x) &&
+                                double.TryParse(parts[1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var z))
+                            { item.x = x; item.z = z; }
+                        }
+                        else
+                        {
+                            if (int.TryParse(parts[0], System.Globalization.NumberStyles.Integer, System.Globalization.CultureInfo.InvariantCulture, out var px) &&
+                                int.TryParse(parts[1], System.Globalization.NumberStyles.Integer, System.Globalization.CultureInfo.InvariantCulture, out var py))
+                            { item.px = px; item.py = py; }
+                        }
+                        if (item.x.HasValue || item.px.HasValue) list.Add(item);
+                    }
+                }
+            }
+            return (epsWorld, epsPx, list);
+        }
+
+        private static bool TryMatchWorldOverrideSE(System.Collections.Generic.List<CoordOverrideSE> list,
+            double x, double z, double epsWorld,
+            out (int dx, int dy, string? style, string? anchor) hit)
+        {
+            foreach (var it in list)
+            {
+                if (it.x.HasValue && it.z.HasValue &&
+                    System.Math.Abs(it.x.Value - x) <= epsWorld &&
+                    System.Math.Abs(it.z.Value - z) <= epsWorld)
+                { hit = (it.dx, it.dy, it.style, it.anchor); return true; }
+            }
+            hit = (0, 0, null, null); return false;
+        }
+
+        private static bool TryMatchPixelOverrideSE(System.Collections.Generic.List<CoordOverrideSE> list,
+            int px, int py, double epsPx,
+            out (int dx, int dy, string? style, string? anchor) hit)
+        {
+            foreach (var it in list)
+            {
+                if (it.px.HasValue && it.py.HasValue &&
+                    System.Math.Abs(it.px.Value - px) <= epsPx &&
+                    System.Math.Abs(it.py.Value - py) <= epsPx)
+                { hit = (it.dx, it.dy, it.style, it.anchor); return true; }
+            }
+            hit = (0, 0, null, null); return false;
+        }
+}
 }
