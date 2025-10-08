@@ -291,6 +291,24 @@ catch (Exception e)
                     Console.WriteLine($"[NightBoss Labels] skipped: {ex.Message}");
                 }
 
+                // 12f) Labels - Shifting Earth (attach_points overlays)
+                try
+                {
+                    if (!string.IsNullOrWhiteSpace(patSummary.Special))
+                    {
+                        NightReign.MapGen.Rendering.LabelerShiftingEarth.Label(
+                            background,
+                            patSummary.Special!,
+                            System.IO.Path.Combine(cwd, "appsettings.json"),
+                            cwd
+                        );
+                    }
+                }
+                catch (Exception exSE)
+                {
+                    Console.WriteLine($"[ShiftingEarth Labels] skipped: {exSE.Message}");
+                }
+
 
 
 
@@ -298,6 +316,22 @@ catch (Exception e)
                 catch (Exception e)
                 {
                     Console.WriteLine($"[MajorBase Labels] skipped: {e.Message}");
+                }
+
+                // 12g) Special Event Banner (bottom-centered)
+                try
+                {
+                    NightReign.MapGen.Rendering.LabelerSpecialEvent.Label(
+                        background,
+                        patternId: id,
+                        appsettingsPath: System.IO.Path.Combine(cwd, "appsettings.json"),
+                        cwd: cwd,
+                        bottomMarginPx: 35
+                    );
+                }
+                catch (Exception exSEB)
+                {
+                    Console.WriteLine($"[SpecialEvent Banner] skipped: {exSEB.Message}");
                 }
 
                 // Save

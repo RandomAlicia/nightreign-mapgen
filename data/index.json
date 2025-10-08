@@ -214,7 +214,7 @@
       "i18nKey": "poi.evergaol_ancient_dragon",
       "category": "Evergaol",
       "name": "Evergaol - Ancient Dragon",
-      "icon": "assets/icon/landmark/evergaol.png"
+      "icon": "assets/icon/landmark/evergaol_elite.png"
     },
     {
       "cid": "02700",
@@ -278,7 +278,7 @@
       "i18nKey": "poi.evergaol_death_rite_bird",
       "category": "Evergaol",
       "name": "Evergaol - Death Rite Bird",
-      "icon": "assets/icon/landmark/evergaol.png"
+      "icon": "assets/icon/landmark/evergaol_elite.png"
     },
     {
       "cid": "03500",
@@ -302,7 +302,7 @@
       "i18nKey": "poi.evergaol_godskin_duo",
       "category": "Evergaol",
       "name": "Evergaol - Godskin Duo",
-      "icon": "assets/icon/landmark/evergaol.png"
+      "icon": "assets/icon/landmark/evergaol_elite.png"
     },
     {
       "cid": "03800",
