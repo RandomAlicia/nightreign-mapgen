@@ -25,15 +25,15 @@ namespace NightReign.MapGen.Rendering
                 // Resolve appsettings.json relative to cwd if not absolute
                 string settingsPath = appsettingsPath;
                 if (!Path.IsPathRooted(settingsPath))
-                    settingsPath = Path.Combine(cwd ?? "", appsettingsPath ?? "appsettings.json");
-
+                settingsPath = Path.Combine(cwd ?? "", appsettingsPath ?? "appsettings.json");
+                
                 if (!File.Exists(settingsPath))
-                    return (0, 0);
-
+                return (0, 0);
+                
                 // Load JSON
                 using var fs = File.OpenRead(settingsPath);
                 using var doc = JsonDocument.Parse(fs);
-
+                
                 // Drill into section path (e.g., "LabelOffsets:MajorBase")
                 JsonElement node = doc.RootElement;
                 if (!string.IsNullOrWhiteSpace(sectionPath))
@@ -41,13 +41,13 @@ namespace NightReign.MapGen.Rendering
                     foreach (var part in sectionPath.Split(':', StringSplitOptions.RemoveEmptyEntries))
                     {
                         if (node.ValueKind != JsonValueKind.Object || !node.TryGetProperty(part, out node))
-                            return (0, 0);
+                        return (0, 0);
                     }
                 }
-
+                
                 // Normalize the type key as we store it in JSON
                 var key = NormalizeTypeKey(typeKey);
-
+                
                 if (node.ValueKind == JsonValueKind.Object && node.TryGetProperty(key, out var typeNode) && typeNode.ValueKind == JsonValueKind.Object)
                 {
                     int dx = 0, dy = 0;
@@ -55,7 +55,7 @@ namespace NightReign.MapGen.Rendering
                     if (typeNode.TryGetProperty("dy", out var dyEl) && dyEl.TryGetInt32(out var dyVal)) dy = dyVal;
                     return (dx, dy);
                 }
-
+                
                 return (0, 0);
             }
             catch
@@ -63,7 +63,7 @@ namespace NightReign.MapGen.Rendering
                 return (0, 0);
             }
         }
-
+        
         private static string NormalizeTypeKey(string? typeKey)
         {
             if (string.IsNullOrWhiteSpace(typeKey)) return "";
