@@ -230,7 +230,7 @@ namespace NightReign.MapGen
             switch (dir.Trim().ToLowerInvariant())
             {
                 case "west":       return "blessing_west.png";
-                case "northwest":  return "blessing_northwest.png";
+                case "northeast":  return "blessing_northeast.png";
                 case "southwest":  return "blessing_southwest.png";
                 default: return null;
             }
