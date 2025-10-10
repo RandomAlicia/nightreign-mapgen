@@ -90,7 +90,8 @@ Converts everything in `output\` to JPGs in `outout-jpn\` (per the script).
 
 Edit **`nightreign-mapgen\appsettings.json`** to change:
 - Text styles (font, size, outline/shadow)
-- Icon sizes
+- Icon sizes/offsets
+- Language/i18n
 - Other rendering options
 
 Re-run your chosen command (`dotnet run`, `mapgen.bat`, etc.) to see changes.
