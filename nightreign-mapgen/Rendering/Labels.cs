@@ -22,171 +22,43 @@ namespace NightReign.MapGen.Rendering
         {
             try
             {
-                // Shared: name-keyed object map for resolver
-                var indexObj = BuildNameKeyedIndex(indexLookup);
+                // Parse appsettings once
+                var appPath = System.IO.Path.Combine(cwd, "appsettings.json");
+                using var appFs = System.IO.File.OpenRead(appPath);
+                using var appDoc = System.Text.Json.JsonDocument.Parse(appFs);
+
+                var ctx = new LabelContext
+                {
+                    Background = background,
+                    Pattern = patternDoc,
+                    IndexLookup = indexLookup,
+                    AppSettingsPath = appPath,
+                    Cwd = cwd,
+                    SpecialValue = specialValue,
+                    PatternId = patternId,
+                    AppSettingsRoot = appDoc.RootElement
+                };
+
+
+                var pipeline = new System.Collections.Generic.List<ILabelPass>
+                {
+                    new LegacyLabelerPasses.MajorBase(),
+                    new LegacyLabelerPasses.MinorBase(),
+                    new LegacyLabelerPasses.Evergaol(),
+                    new LegacyLabelerPasses.FieldBoss(),
+                    new LegacyLabelerPasses.NightBoss(),
+                    new LegacyLabelerPasses.ShiftingEarth(),
+                    new LegacyLabelerPasses.SpecialEvent(),
+                    new LegacyLabelerPasses.SpecialIcon()
+                };
                 
-                // 12) Labels - Major Base
-                NightReign.MapGen.Rendering.LabelerMajorBase.Label(
-                background,
-                patternDoc.pois,
-                p => (p.name, p.x, p.z),
-                indexObj,
-                Path.Combine(cwd, "appsettings.json"),
-                cwd,
-                ImageHelpers.WorldToPxPy1536,
-                "poiStandard"
-                );
-                
-                // 12b) Labels - Minor Base (Sorcerers_Rise)
-                try
-                {
-                    var indexObj2 = BuildNameKeyedIndex(indexLookup);
-                    NightReign.MapGen.Rendering.LabelerMinorBase.Label(
-                    background,
-                    patternDoc.pois,
-                    p => (p.name, p.x, p.z),
-                    indexObj2,
-                    Path.Combine(cwd, "appsettings.json"),
-                    cwd,
-                    ImageHelpers.WorldToPxPy1536,
-                    "poiStandard"
-                    );
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"[MinorBase Labels] skipped: {e.Message}");
-                }
-                
-                // 12c) Labels - Evergaol
-                try
-                {
-                    NightReign.MapGen.Rendering.LabelerEvergaol.Label(
-                    background,
-                    patternDoc.pois,
-                    p => (p.name, p.x, p.z),
-                    indexObj,
-                    Path.Combine(cwd, "appsettings.json"),
-                    cwd,
-                    ImageHelpers.WorldToPxPy1536,
-                    "poiStandard"
-                    );
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"[Evergaol Labels] skipped: {e.Message}");
-                }
-                
-                // 12d) Labels - Field Boss
-                try
-                {
-                    NightReign.MapGen.Rendering.LabelerFieldBoss.Label(
-                    background,
-                    patternDoc.pois,
-                    p => (p.name, p.x, p.z),
-                    indexObj,
-                    Path.Combine(cwd, "appsettings.json"),
-                    cwd,
-                    ImageHelpers.WorldToPxPy1536,
-                    "poiStandard"
-                    );
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"[FieldBoss Labels] skipped: {e.Message}");
-                }
-                
-                // 12e) Labels - Night Boss
-                try
-                {
-                    NightReign.MapGen.Rendering.LabelerNightBoss.Label(
-                    background,
-                    patternDoc.pois,
-                    p => (p.name, p.x, p.z),
-                    indexObj,
-                    Path.Combine(cwd, "appsettings.json"),
-                    cwd,
-                    ImageHelpers.WorldToPxPy1536,
-                    "poiNightBoss"
-                    );
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"[NightBoss Labels] skipped: {ex.Message}");
-                }
-                
-                // 12f) Labels - Shifting Earth (attach_points overlays)
-                try
-                {
-                    NightReign.MapGen.Rendering.LabelerShiftingEarth.Label(
-                    background,
-                    specialValue: specialValue,
-                    appsettingsPath: Path.Combine(cwd, "appsettings.json"),
-                    cwd: cwd
-                    );
-                }
-                catch (Exception exSE)
-                {
-                    Console.WriteLine($"[ShiftingEarth Labels] skipped: {exSE.Message}");
-                }
-                
-                // 12g) Special Event Banner (bottom-centered)
-                try
-                {
-                    NightReign.MapGen.Rendering.LabelerSpecialEvent.Label(
-                    background,
-                    patternId: patternId,
-                    appsettingsPath: Path.Combine(cwd, "appsettings.json"),
-                    cwd: cwd,
-                    bottomMarginPx: 24
-                    );
-                }
-                catch (Exception exSEB)
-                {
-                    Console.WriteLine($"[SpecialEvent Banner] skipped: {exSEB.Message}");
-                }
-                
-                // 12h) Special Icon overlay (Township/Merchant PNG)
-                try
-                {
-                    NightReign.MapGen.Rendering.LabelerSpecialIcon.Label(
-                    background,
-                    patternId: patternId,
-                    appsettingsPath: Path.Combine(cwd, "appsettings.json"),
-                    cwd: cwd
-                    );
-                }
-                catch (Exception exSI)
-                {
-                    Console.WriteLine($"[SpecialIcon] skipped: {exSI.Message}");
-                }
+                LabelPipeline.Execute(pipeline, ctx);
             }
             catch (Exception e)
             {
                 Console.WriteLine($"[Labels] skipped: {e.Message}");
             }
         }
-        
-        private static Dictionary<string, object> BuildNameKeyedIndex(Dictionary<string, IndexEntry> indexLookup)
-        {
-            var indexObj = new Dictionary<string, object>(StringComparer.Ordinal);
-            foreach (var kv in indexLookup)
-            {
-                var v = kv.Value;
-                string k = kv.Key;
-                try
-                {
-                    var t = v.GetType();
-                    var nameProp = t.GetProperty("name") ?? t.GetProperty("Name");
-                    if (nameProp != null)
-                    {
-                        var nameVal = nameProp.GetValue(v) as string;
-                        if (!string.IsNullOrWhiteSpace(nameVal)) k = nameVal;
-                    }
-                }
-                catch { }
-                indexObj[k] = v;
-            }
-            return indexObj;
-        }
     }
 }
+ 

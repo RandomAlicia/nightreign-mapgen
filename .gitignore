@@ -1,0 +1,8 @@
+*.png
+*.dll
+*.zip
+
+nightreign-mapgen/bin/*
+nightreign-mapgen/obj/*
+nightreign-mapgen/output/*
+nightreign-mapgen/output-jpg/*

@@ -6,6 +6,7 @@ echo ==== Running fixed set ====
 dotnet run -- "..\data\pattern\pattern_000.json"
 dotnet run -- "..\data\pattern\pattern_003.json"
 dotnet run -- "..\data\pattern\pattern_016.json"
+dotnet run -- "..\data\pattern\pattern_046.json"
 dotnet run -- "..\data\pattern\pattern_060.json"
 dotnet run -- "..\data\pattern\pattern_090.json"
 dotnet run -- "..\data\pattern\pattern_101.json"

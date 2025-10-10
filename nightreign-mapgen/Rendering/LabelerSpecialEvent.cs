@@ -407,8 +407,12 @@ namespace NightReign.MapGen.Rendering
                         int offY = glowEl.TryGetProperty("OffsetY", out var oy) && oy.ValueKind == JsonValueKind.Number ? oy.GetInt32() : 0;
                         glow = new TextRenderer.GlowStyle
                         {
-                            OffsetX = offX, OffsetY = offY, WideningRadius = widen, BlurRadius = blur,
-                            Color = new MagickColor(colorHex), OpacityPercent = opacity
+                            OffsetX = offX,
+                            OffsetY = offY,
+                            WideningRadius = widen,
+                            BlurRadius = blur,
+                            Color = new MagickColor(colorHex),
+                            OpacityPercent = opacity
                         };
                     }
                 }
@@ -452,8 +456,12 @@ namespace NightReign.MapGen.Rendering
                         int offY = glowEl.TryGetProperty("OffsetY", out var oy) && oy.ValueKind == JsonValueKind.Number ? oy.GetInt32() : 0;
                         res.glow = new TextRenderer.GlowStyle
                         {
-                            OffsetX = offX, OffsetY = offY, WideningRadius = widen, BlurRadius = blur,
-                            Color = new MagickColor(colorHex), OpacityPercent = opacity
+                            OffsetX = offX,
+                            OffsetY = offY,
+                            WideningRadius = widen,
+                            BlurRadius = blur,
+                            Color = new MagickColor(colorHex),
+                            OpacityPercent = opacity
                         };
                     }
                 }

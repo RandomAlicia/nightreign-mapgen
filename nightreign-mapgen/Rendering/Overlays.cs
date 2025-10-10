@@ -174,7 +174,7 @@ namespace NightReign.MapGen.Rendering
                     var notoCand = Program.ResolvePath("../assets/font/NotoSans-Regular.ttf", cwd);
                     if (File.Exists(notoCand)) idFontPath = notoCand;
                 }
-                
+
                 var settings = new MagickReadSettings
                 {
                     Font = idFontPath,

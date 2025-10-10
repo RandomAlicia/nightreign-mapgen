@@ -12,7 +12,7 @@ namespace NightReign.MapGen
             if (cfg.FieldBoss == null) { Console.WriteLine("[FieldBoss] Config missing."); return; }
             
             int total = 0, matched = 0, drawn = 0, missingIcon = 0, notInIndex = 0, skippedSubtype = 0;
-            
+
             string[] prefixesSpace = { "Arena Boss -", "Field Boss -", "Strong Field Boss -", "Castle -" };
             string[] prefixesUnd   = { "Arena_Boss -", "Field_Boss -", "Strong_Field_Boss -", "Castle -" };
             
