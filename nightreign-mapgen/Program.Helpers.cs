@@ -5,14 +5,28 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Collections.Generic;
 using ImageMagick;
+using NightReign.MapGen.Helpers;
 
 namespace NightReign.MapGen
 {
     public static partial class Program
     {
+        // --- Performance: cache File.Exists results to cut filesystem churn ---
+        static readonly System.Collections.Concurrent.ConcurrentDictionary<string, bool> __existsCache 
+            = new System.Collections.Concurrent.ConcurrentDictionary<string, bool>(StringComparer.OrdinalIgnoreCase);
+
+        internal static bool CachedExists(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path)) return false;
+            return __existsCache.GetOrAdd(path, p => CachedIO.CachedExists(p));
+        }
+
+        // Global verbosity switch (optional, read from config in LoadConfig if present)
+        internal static bool Verbose { get; set; } = false;
+
         internal static AppConfig LoadConfig(string path)
         {
-            if (!File.Exists(path))
+            if (!CachedExists(path))
             throw new FileNotFoundException($"Config file not found: {path}");
             
             var json = File.ReadAllText(path);
@@ -20,6 +34,13 @@ namespace NightReign.MapGen
             ?? throw new InvalidOperationException("Failed to parse appsettings.json.");
             if (string.IsNullOrWhiteSpace(cfg.OutputFolder))
             cfg.OutputFolder = "output";
+            // Read optional Verbose flag to gate hot-loop logging
+            try {
+                using var __doc = System.Text.Json.JsonDocument.Parse(json);
+                if (__doc.RootElement.TryGetProperty("Verbose", out var vvv) && vvv.ValueKind == System.Text.Json.JsonValueKind.True) 
+                    Verbose = true;
+            } catch {}
+    
             return cfg;
         }
         
@@ -33,7 +54,7 @@ namespace NightReign.MapGen
         
         internal static string? GetPatternId(string patternPath)
         {
-            if (!File.Exists(patternPath))
+            if (!CachedExists(patternPath))
             throw new FileNotFoundException($"Pattern JSON not found: {patternPath}");
             
             try
@@ -62,7 +83,7 @@ namespace NightReign.MapGen
         
         internal static IEnumerable<SummaryPattern> LoadSummary(string summaryPath)
         {
-            if (!File.Exists(summaryPath))
+            if (!CachedExists(summaryPath))
             throw new FileNotFoundException($"Summary JSON not found: {summaryPath}");
             
             var json = File.ReadAllText(summaryPath);
@@ -103,7 +124,7 @@ namespace NightReign.MapGen
                                 if (string.IsNullOrEmpty(key)) continue;
                                 dict[key] = e;
                             }
-                            Console.WriteLine($"[Index] Loaded {dict.Count} entries (object.entries).");
+                            if (Verbose) Console.WriteLine($"[Index] Loaded {dict.Count} entries (object.entries).");
                             return dict;
                         }
                     }
@@ -124,7 +145,7 @@ namespace NightReign.MapGen
                                 if (string.IsNullOrEmpty(key)) continue;
                                 dict[key] = e;
                             }
-                            Console.WriteLine($"[Index] Loaded {dict.Count} entries (array).");
+                            if (Verbose) Console.WriteLine($"[Index] Loaded {dict.Count} entries (array).");
                             return dict;
                         }
                     }
@@ -155,7 +176,7 @@ namespace NightReign.MapGen
                         }
                         dict[key] = e;
                     }
-                    Console.WriteLine($"[Index] Loaded {dict.Count} entries (object map).");
+                    if (Verbose) Console.WriteLine($"[Index] Loaded {dict.Count} entries (object map).");
                 }
             }
             
@@ -298,7 +319,7 @@ namespace NightReign.MapGen
         
         internal static void CompositeFullCanvasIfExists(MagickImage background, string overlayPath)
         {
-            if (!File.Exists(overlayPath))
+            if (!CachedExists(overlayPath))
             {
                 Console.WriteLine($"[Warn] Overlay not found: {overlayPath}");
                 return;
@@ -310,19 +331,19 @@ namespace NightReign.MapGen
                 overlay.Resize((uint)background.Width, (uint)background.Height);
             }
             background.Composite(overlay, 0, 0, CompositeOperator.Over);
-            Console.WriteLine($"[OK] Applied overlay: {System.IO.Path.GetFileName(overlayPath)}");
+            if (Verbose) Console.WriteLine($"[OK] Applied overlay: {System.IO.Path.GetFileName(overlayPath)}");
         }
         
         internal static void CompositeNoResizeIfExists(MagickImage background, string overlayPath)
         {
-            if (!File.Exists(overlayPath))
+            if (!CachedExists(overlayPath))
             {
                 Console.WriteLine($"[Warn] Overlay not found: {overlayPath}");
                 return;
             }
             using var overlay = new MagickImage(overlayPath);
             background.Composite(overlay, 0, 0, CompositeOperator.Over);
-            Console.WriteLine($"[OK] Applied (no-resize) overlay: {System.IO.Path.GetFileName(overlayPath)}");
+            if (Verbose) Console.WriteLine($"[OK] Applied (no-resize) overlay: {System.IO.Path.GetFileName(overlayPath)}");
         }
         
         internal static (double px, double py) MapToPxPyExact1536(double x, double z)
@@ -333,25 +354,29 @@ namespace NightReign.MapGen
         
         internal static void CompositeIconAt(MagickImage background, string iconPath, double x, double z, int targetW, int targetH)
         {
-            if (!File.Exists(iconPath))
+            // Optimized: use in-process icon cache to avoid repeated decode+resize
+            if (string.IsNullOrWhiteSpace(iconPath))
+            {
+                if (Verbose) Console.WriteLine("[Icon] Empty path.");
+                return;
+            }
+
+            if (!CachedExists(iconPath))
             {
                 Console.WriteLine($"[Warn] Icon missing: {iconPath}");
                 return;
             }
-            using var icon = new MagickImage(iconPath);
-            
-            double s = Math.Min((double)targetW / (int)icon.Width, (double)targetH / (int)icon.Height);
-            int newW = Math.Max(1, (int)Math.Round((int)icon.Width * s));
-            int newH = Math.Max(1, (int)Math.Round((int)icon.Height * s));
-            if (newW != (int)icon.Width || newH != (int)icon.Height)
-            icon.Resize((uint)newW, (uint)newH);
-            
+
+            // Fetch cached, resized icon. Resizing preserves aspect ratio to fit within target box.
+            var icon = NightReign.MapGen.Rendering.ImageCache.GetResized(iconPath, targetW, targetH);
+
             var (px, py) = MapToPxPyExact1536(x, z);
-            int xTopLeft = (int)Math.Round(px - newW / 2.0);
-            int yTopLeft = (int)Math.Round(py - newH / 2.0);
-            
+            int xTopLeft = (int)Math.Round(px - icon.Width / 2.0);
+            int yTopLeft = (int)Math.Round(py - icon.Height / 2.0);
+
             background.Composite(icon, xTopLeft, yTopLeft, CompositeOperator.Over);
-        }
+            if (Verbose) if (Verbose) Console.WriteLine($"[OK] Anchored '{System.IO.Path.GetFileName(iconPath)}' at {xTopLeft},{yTopLeft} ({icon.Width}x{icon.Height})");
+    }
         
         internal static (int x, int y) MeasureAnchor(
         int canvasW, int canvasH,
@@ -373,7 +398,7 @@ namespace NightReign.MapGen
         
         internal static void CompositeIconAnchored(MagickImage background, string iconPath, IconSettings? settings)
         {
-            if (!File.Exists(iconPath))
+            if (!CachedExists(iconPath))
             {
                 Console.WriteLine($"[Warn] Icon not found: {iconPath}");
                 return;
@@ -429,7 +454,7 @@ namespace NightReign.MapGen
             int placeY = boxY + Math.Max(0, (boxH == int.MaxValue ? 0 : (boxH - newH) / 2));
             
             background.Composite(icon, placeX, placeY, CompositeOperator.Over);
-            Console.WriteLine($"[OK] Anchored '{System.IO.Path.GetFileName(iconPath)}' at {placeX},{placeY} ({newW}x{newH})");
+            if (Verbose) Console.WriteLine($"[OK] Anchored '{System.IO.Path.GetFileName(iconPath)}' at {placeX},{placeY} ({newW}x{newH})");
         }
         
         internal static string? ResolveIconPath(string? indexIconPath, string poiName, AppConfig cfg, string cwd)
@@ -438,7 +463,7 @@ namespace NightReign.MapGen
             {
                 var normalizedOv = NormalizeIconPath(overridePath.Trim());
                 var absOv = ResolvePath(normalizedOv, cwd);
-                if (File.Exists(absOv)) return absOv;
+                if (CachedExists(absOv)) return absOv;
                 Console.WriteLine($"[IconOverride] Missing override file for '{poiName}': {absOv}");
             }
             
@@ -446,7 +471,7 @@ namespace NightReign.MapGen
             {
                 var normalized = NormalizeIconPath(indexIconPath.Trim());
                 var abs = ResolvePath(normalized, cwd);
-                if (File.Exists(abs)) return abs;
+                if (CachedExists(abs)) return abs;
                 Console.WriteLine($"[Icon] Missing file for '{poiName}': {abs}");
             }
             return null;

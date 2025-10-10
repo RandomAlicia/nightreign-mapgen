@@ -47,7 +47,7 @@ namespace NightReign.MapGen.Rendering
                 var root = doc.RootElement;
                 if (root.ValueKind != JsonValueKind.Object || !root.TryGetProperty("patterns", out var pats) || pats.ValueKind != JsonValueKind.Array)
                 {
-                    Console.WriteLine("[SpecialEvent] invalid summary.json structure");
+                    if (NightReign.MapGen.Program.Verbose) Console.WriteLine("[SpecialEvent] invalid summary.json structure");
                     return;
                 }
                 
@@ -103,7 +103,7 @@ namespace NightReign.MapGen.Rendering
                 
                 if (string.IsNullOrWhiteSpace(key))
                 {
-                    Console.WriteLine("[SpecialEvent] no key could be resolved; skipping banner.");
+                    if (NightReign.MapGen.Program.Verbose) Console.WriteLine("[SpecialEvent] no key could be resolved; skipping banner.");
                     return;
                 }
                 

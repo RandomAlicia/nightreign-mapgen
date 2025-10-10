@@ -61,7 +61,7 @@ namespace NightReign.MapGen.Rendering
                 
                 if (!hasTownship && !hasMerchant)
                 {
-                    Console.WriteLine("[SpecialIcon] none present; skip");
+                    if (NightReign.MapGen.Program.Verbose) Console.WriteLine("[SpecialIcon] none present; skip");
                     return;
                 }
                 

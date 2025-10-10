@@ -8,8 +8,8 @@ namespace NightReign.MapGen
     {
         public static void Render(MagickImage background, PatternDoc pattern, Dictionary<string, IndexEntry> indexLookup, AppConfig cfg, string cwd)
         {
-            if (pattern.pois == null || pattern.pois.Count == 0) { Console.WriteLine("[FieldBoss] No POIs."); return; }
-            if (cfg.FieldBoss == null) { Console.WriteLine("[FieldBoss] Config missing."); return; }
+            if (pattern.pois == null || pattern.pois.Count == 0) { if (NightReign.MapGen.Program.Verbose) Console.WriteLine("[FieldBoss] No POIs."); return; }
+            if (cfg.FieldBoss == null) { if (NightReign.MapGen.Program.Verbose) Console.WriteLine("[FieldBoss] Config missing."); return; }
             
             int total = 0, matched = 0, drawn = 0, missingIcon = 0, notInIndex = 0, skippedSubtype = 0;
 

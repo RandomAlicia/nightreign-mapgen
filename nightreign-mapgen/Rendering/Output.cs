@@ -13,6 +13,7 @@ namespace NightReign.MapGen.Rendering
         {
             background.Format = MagickFormat.Png;
             var outputPath = Path.Combine(outputFolder, $"{id}.png");
+            background.Settings.SetDefine(MagickFormat.Png, "compression-level", "4");
             background.Write(outputPath);
             Console.WriteLine($"[Wrote] {outputPath}");
         }

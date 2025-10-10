@@ -36,8 +36,7 @@ namespace NightReign.MapGen.Rendering
             if (background is null || pois is null || select is null || mapXZtoPxPy is null) return;
 
             // Load config bits: Text styles, I18n, LabelOffsets.MajorBase
-            using var doc = JsonDocument.Parse(File.ReadAllText(appsettingsPath));
-            var root = doc.RootElement;
+            var root = NightReign.MapGen.Rendering.ConfigCache.GetRoot(appsettingsPath);
 
             var (fontPath, fontSize, fill, glow) = StyleResolver.ReadTextStyle(root, styleName, cwd, 17);
 
